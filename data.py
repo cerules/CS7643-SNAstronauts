@@ -8,6 +8,7 @@ from torch_geometric.data import Data
 def get_ironmarch_network_data(posts_path = "./data/iron_march_201911/csv/core_message_posts.csv", topics_path = "./data/iron_march_201911/csv/core_message_topics.csv", threshold = 2):
     '''
     Returns pytorch geometric graph data object created from IronMarch message post data
+    and the ids list to look up user database ids
 
     threshold determines the number of message topics two users must have posted on together for an edge to be created between the two users 
     '''
@@ -29,18 +30,26 @@ def get_ironmarch_network_data(posts_path = "./data/iron_march_201911/csv/core_m
                     links[author][other_author] = 0
                 links[author][other_author] = links[author][other_author] + 1
 
+    # need ids list to map edge index to member id
+    ids = list(links.keys())
+    ids.sort()
+
+
     edge_index = []
     for author in links.keys():
         for co_author in links[author].keys():
             if author != co_author and links[author][co_author] > threshold:
-                edge_index.append([author, co_author])
+                edge_index.append([ids.index(author), ids.index(co_author)])
 
     edge_index = torch.tensor(edge_index, dtype=torch.long)
     edge_index=edge_index.t().contiguous() # this is what pytorch geometric wants
 
-    # just going to give each user a feature vector of 0 until we get bag of words
-    x = torch.zeros(len(authors))
+    # just going to give each user a feature vector of 1 until we get bag of words
+    x = torch.ones((len(authors), 1))
 
     data = Data(x=x, edge_index=edge_index)
 
-    return data
+    return data, ids
+
+if __name__ == "__main__":
+    get_ironmarch_network_data()
