@@ -2,11 +2,6 @@ import pandas as pd
 import numpy as np
 import torch
 from torch_geometric.data import Data
-import collections, re
-import nltk
-nltk.download('stopwords')
-from nltk.corpus import stopwords
-
 
 
 def get_ironmarch_network_data(posts_path = "./data/iron_march_201911/csv/core_message_posts.csv", 
@@ -54,30 +49,8 @@ def get_ironmarch_network_data(posts_path = "./data/iron_march_201911/csv/core_m
     edge_index = edge_index.t().contiguous() # this is what pytorch geometric wants
 
     # just going to give each user a feature vector of 1 until we get bag of words
-    x = torch.ones((len(authors), 1))
-
-    # TODO: Create bag-of-words
-    # Get vocabulary
-    # Remove html tags and strip new lines
-    # From https://stackoverflow.com/questions/9662346/python-code-to-remove-html-tags-from-a-string
-    TAG_RE = re.compile(r'<[^>]+>')
-    def remove_tags(text):
-        return TAG_RE.sub('', text).strip().replace('\n', ' ')
-    post_list = []
-    for post in posts.msg_post.values:
-        stripped_post = remove_tags(post)
-        post_list.append(stripped_post)
-    # Get unique words and remove common words
-    # Source: https://stackoverflow.com/questions/46360435/how-to-create-a-bag-of-words-from-a-pandas-dataframe
-    msg_post_word_counter = collections.Counter([y for x in post_list for y in x.split()])
-    filtered_post_words = [word for word in msg_post_word_counter if word not in stopwords.words('english')]
-    # TODO: Create word-to-idx vector
-    # Source: https://pytorch.org/tutorials/beginner/nlp/word_embeddings_tutorial.html
-    # word_to_ix = {"hello": 0, "world": 1}
-    # embeds = torch.nn.Embedding(len(filtered_post_words), 5)  # n words in vocab, 5 dimensional embeddings
-    # print(embeds)
-    # TODO: Need to actually implement. Also split this into a separate module
-    # Sources: https://mmuratarat.github.io/2020-04-03/bow_model_tf_idf, ...
+    # x = torch.ones((len(authors), 1))
+    x = torch.tensor((len(authors), ))
 
     data = Data(x=x, edge_index=edge_index)
 
