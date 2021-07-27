@@ -49,8 +49,8 @@ def get_ironmarch_network_data(posts_path = "./data/iron_march_201911/csv/core_m
     edge_index = edge_index.t().contiguous() # this is what pytorch geometric wants
 
     # just going to give each user a feature vector of 1 until we get bag of words
-    # x = torch.ones((len(authors), 1))
-    x = torch.tensor((len(authors), ))
+    x = torch.ones((len(authors), 1))
+    # x = torch.tensor((len(authors), TODO))
 
     data = Data(x=x, edge_index=edge_index)
 
