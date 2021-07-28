@@ -4,15 +4,15 @@ import torch
 from torch_geometric.data import Data
 
 
-def get_ironmarch_network_data(posts_path = "./data/iron_march_201911/csv/core_message_posts.csv", 
-                               topics_path = "./data/iron_march_201911/csv/core_message_topics.csv", 
+def get_ironmarch_network_data(posts_path = "forum_posts.csv",
+                               topics_path = "forum_topics.csv", 
                                threshold = 2):
     '''
     Returns pytorch geometric graph data object created from IronMarch message post data
     and the ids list to look up user database ids
 
-    threshold - determines the number of message topics two users must have posted on together for an edge 
-    to be created between the two users 
+    threshold - determines the number of message topics two users must have posted on together for an edge
+    to be created between the two users
     '''
     posts = pd.read_csv(posts_path)
     topics = pd.read_csv(topics_path)
@@ -20,7 +20,7 @@ def get_ironmarch_network_data(posts_path = "./data/iron_march_201911/csv/core_m
     authors = posts['msg_author_id'].unique()
     mt_ids = topics["mt_id"].unique()
 
-    # Create links (author1 -#-> author2) dictionary 
+    # Create links (author1 -#-> author2) dictionary
     links = {}
     for mt_id in mt_ids:
         mt_posts = posts.loc[posts['msg_topic_id'] == mt_id]
