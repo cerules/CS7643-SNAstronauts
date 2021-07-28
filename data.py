@@ -3,6 +3,7 @@ import numpy as np
 import torch
 from torch_geometric.data import Data
 
+from bag_of_words import get_bag_of_words
 
 def get_ironmarch_network_data(posts_path = "forum_posts.csv",
                                topics_path = "forum_topics.csv", 
@@ -50,7 +51,8 @@ def get_ironmarch_network_data(posts_path = "forum_posts.csv",
 
     # just going to give each user a feature vector of 1 until we get bag of words
     x = torch.ones((len(authors), 1))
-    # x = torch.tensor((len(authors), TODO))
+    # x = torch.ones((len(authors), 2))
+    # x, _ = get_bag_of_words() # How to place it in so the model will train?
 
     data = Data(x=x, edge_index=edge_index)
 
