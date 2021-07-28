@@ -39,7 +39,7 @@ def get_link_labels(pos_edge_index, neg_edge_index, device):
     return link_labels
 
 
-def train(model, optimizer, device, data):
+def train_epoch(model, optimizer, device, data):
     model.train()
 
     neg_edge_index = negative_sampling(
@@ -54,7 +54,9 @@ def train(model, optimizer, device, data):
     loss.backward()
     optimizer.step()
 
-    return loss
+    train_auc = roc_auc_score(link_labels.cpu().detach().numpy(), link_logits.sigmoid().cpu().detach().numpy())
+
+    return loss, train_auc
 
 
 @torch.no_grad()
@@ -70,5 +72,7 @@ def test(model, device, data):
         link_logits = model.decode(z, pos_edge_index, neg_edge_index)
         link_probs = link_logits.sigmoid()
         link_labels = get_link_labels(pos_edge_index, neg_edge_index, device)
+        loss = F.binary_cross_entropy_with_logits(link_logits, link_labels)
+        results.append(loss)
         results.append(roc_auc_score(link_labels.cpu(), link_probs.cpu()))
     return results
