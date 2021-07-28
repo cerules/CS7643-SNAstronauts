@@ -3,78 +3,85 @@ import numpy as np
 import torch
 from torch_geometric.data import Data
 
-import nltk
+from nltk import word_tokenize
 # nltk.download('stopwords')
-# nltk.download('punkt')
 from nltk.corpus import stopwords
+import string
 from bs4 import BeautifulSoup
 import collections, re
 
-# Alternatives:
 from keras.preprocessing.text import Tokenizer
 # import torchtext
 # from torchtext.data import get_tokenizer
 
 
-def get_bag_of_words():
+def get_bag_of_words(posts_path = "./data/iron_march_201911/csv/core_message_posts.csv", 
+                     topics_path = "./data/iron_march_201911/csv/core_message_topics.csv"):
     '''
-    Returns bag of words tensor for each other given the post vocabulary
+    Creates a post vocabulary
 
-    TODO: Main issue is the memory issue still. Efficient stop word filtering without looking
-    at every single word. Keras is the best I've found for getting the desired representation.
-    Feel free to play around with this.
+    return 
+    0 - Bag of words array of shape (number_of_authors, number_of_words_in_vocab) 
+        where the vocabulary is pulled from all the posts. The number frequency of the vocab word that
+        shows up in the authors' posts is at each number_of_words_in_vocab index.
+    1 - List holding the vocabulary from this particular complete dataset.
     '''
-    posts = pd.read_csv("./data/iron_march_201911/csv/core_message_posts.csv")
-    topics = pd.read_csv("./data/iron_march_201911/csv/core_message_topics.csv")
+    posts = pd.read_csv(posts_path)
+    topics = pd.read_csv(topics_path)
 
     authors = posts['msg_author_id'].unique()
     mt_ids = topics["mt_id"].unique()
 
     # Create bag-of-words
     # ---------- Get vocabulary (create lists of posts) ----------
-    # Remove html tags and strip new lines
-    # # From https://stackoverflow.com/questions/9662346/python-code-to-remove-html-tags-from-a-string
-    # TAG_RE = re.compile(r'<[^>]+>')
-    # def remove_tags(text):
-    #     return TAG_RE.sub('', text).strip().replace('\n', ' ')
+    # Remove html tags, stopwords, and punctuation
     post_list = []
+    # print(posts.msg_post.values.shape) # debugging print
     for post in posts.msg_post.values:
+        # print(f'post = {post}') # debugging print
         stripped_post = BeautifulSoup(post, 'html.parser').get_text().replace(u'\xa0', u' ')
+        # Remove stopwords (must look at every word so slows performance)
+        stop = stopwords.words('english')
+        stripped_post = ' '.join([i for i in word_tokenize(stripped_post.lower()) if i not in stop])
         post_list.append(stripped_post)
-    print(f"len(post_list) = {len(post_list)}")
-
-    # # TODO: Get unique words and remove common words. Memory issue remains though
-    # # Source: https://stackoverflow.com/questions/46360435/how-to-create-a-bag-of-words-from-a-pandas-dataframe
-    # msg_post_word_counter = collections.Counter([y for x in post_list for y in x.split()])
-    # filtered_post_words = [word for word in msg_post_word_counter if word not in stopwords.words('english')]
+        # print(f"post_list = {post_list}") # debugging print
+        # print(f"len(post_list) = {len(post_list)}") # debugging print
 
     # Using keras Tokenizer to create vocabulary
     bow_vocab_model = Tokenizer()
     bow_vocab_model.fit_on_texts(post_list)
 
-    # Print keys 
+    # Print keys # debugging print
     # print(f'Key : {list(bow_vocab_model.word_index.keys())}')
     print(f'len(list(bow_vocab_model.word_index.keys())) = {len(list(bow_vocab_model.word_index.keys()))}')
 
     # ---------- Get bag of words representation for each author based on words in each post ----------
-    # Create links (author1 -#-> author2) dictionary
     author_post_bags_of_words = []
-    for author in [0, 1]:
+    for author in authors:
         mt_posts = posts.loc[posts['msg_author_id'] == author]
         posts_for_this_author = mt_posts.msg_post.values
-        print(type(posts_for_this_author))
-        print(len(posts_for_this_author))
-        # print(posts_for_this_author)
-        # TODO: Need to filter stop words and formatting here as well
-        author_bow = bow_vocab_model.texts_to_matrix(posts_for_this_author, mode='count')
+        # print(f'type(posts_for_this_author) = {type(posts_for_this_author)}') # debugging print
+        # print(f'posts_for_this_author.shape = {posts_for_this_author.shape}') # debugging print
+        # print(posts_for_this_author) # debugging print
+        posts_for_this_author_list = []
+        # Remove text similar to vocab
+        for post in posts_for_this_author:
+            stripped_post = BeautifulSoup(post, 'html.parser').get_text().replace(u'\xa0', u' ')
+            posts_for_this_author_list.append(stripped_post)
+        author_bow = bow_vocab_model.texts_to_matrix(posts_for_this_author_list, mode='count')
+        # print(f'type(author_bow) = {type(author_bow)}') # debugging print
+        # print(f'author_bow.shape = {author_bow.shape}') # debugging print
+        author_bow = np.sum(author_bow, axis=0)
+        # print("Summing along axis=0") # debugging print
+        # print(f'author_bow = {author_bow}') # debugging print
+        # print(f'author_bow.shape = {author_bow.shape}') # debugging print
         author_post_bags_of_words.append(author_bow)
 
-    # # Alternative: torchtext get_tokenizer
-    # tokenizer = get_tokenizer("basic_english")
-    # tokens = tokenizer("You can now install TorchText using pip!")
-    # print(tokens)
+    # There's an extra column for some reason. Remove here but should find the cause later
+    # print(f'np.array(author_post_bags_of_words)[:, 1:] = {np.array(author_post_bags_of_words)[:, 1:]}') # debugging print
+    print(f'np.array(author_post_bags_of_words)[:, 1:].shape = {np.array(author_post_bags_of_words)[:, 1:].shape}') # debugging print
 
-    return torch.tensor(author_post_bags_of_words), bow_vocab_model
+    return np.array(author_post_bags_of_words)[:, 1:], list(bow_vocab_model.word_index.keys())
 
 if __name__ == "__main__":
     get_bag_of_words()
