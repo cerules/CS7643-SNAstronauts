@@ -3,7 +3,8 @@
 # https://github.com/rusty1s/pytorch_geometric/blob/master/examples/link_pred.py
 
 from data import get_ironmarch_network_data
-from gnn import Net, train, test
+from gnn import Net
+from train import Trainer
 import torch
 from torch_geometric.utils import train_test_split_edges
 
@@ -17,15 +18,9 @@ if __name__ == "__main__":
     data = data.to(device)
     optimizer = torch.optim.Adam(params=model.parameters(), lr=0.01)
 
-    best_val_auc = test_auc = 0
-    for epoch in range(1, 10001):
-        loss = train(model, optimizer, device, data)
-        val_auc, tmp_test_auc = test(model, device, data)
-        if val_auc > best_val_auc:
-            best_val = val_auc
-            test_auc = tmp_test_auc
-        print(f'Epoch: {epoch:03d}, Loss: {loss:.4f}, Val: {val_auc:.4f}, '
-            f'Test: {test_auc:.4f}')
+    trainer = Trainer(model, optimizer, device, "1000_epochs")
+
+    trainer.train(data, 1001)
 
     z = model.encode(data.x, data.train_pos_edge_index)
     final_edge_index = model.decode_all(z)
