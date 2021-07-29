@@ -9,7 +9,7 @@ import torch
 from torch_geometric.utils import train_test_split_edges
 
 if __name__ == "__main__":
-    data, _ = get_ironmarch_network_data("./data/forum_posts.csv", "./data/forum_topics.csv")
+    data, _ = get_ironmarch_network_data(threshold=5, load=False, data_path="./data/ironmarch_5.pth")
     data = train_test_split_edges(data)
     num_features = data.x.shape[1]
 
@@ -18,7 +18,7 @@ if __name__ == "__main__":
     data = data.to(device)
     optimizer = torch.optim.Adam(params=model.parameters(), lr=0.01)
 
-    trainer = Trainer(model, optimizer, device, "1000_epochs")
+    trainer = Trainer(model, optimizer, device, "1000_epochs_ironmarch_5")
 
     trainer.train(data, 1001)
 
