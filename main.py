@@ -9,9 +9,9 @@ import torch
 from torch_geometric.utils import train_test_split_edges
 
 if __name__ == "__main__":
-    data, _ = get_ironmarch_network_data()
+    data, _ = get_ironmarch_network_data("./data/forum_posts.csv", "./data/forum_topics.csv")
     data = train_test_split_edges(data)
-    num_features = 1
+    num_features = data.x.shape[1]
 
     device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
     model = Net(num_features, 64).to(device)
