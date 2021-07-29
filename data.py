@@ -8,13 +8,15 @@ from bag_of_words import get_bag_of_words
 
 
 def get_ironmarch_network_data(
-    # posts_path="./data/iron_march_201911/csv/core_message_posts.csv", topics_path="./data/iron_march_201911/csv/core_message_topics.csv",
                                 posts_path = "./data/forum_posts.csv",
-                               topics_path = "./data/forum_topics.csv",
-                               data_path = "./data/ironmarch.pth", 
-                               threshold = 2,
-                               load=True,
-                               save=True):
+                                topics_path = "./data/forum_topics.csv",
+                                data_path = "./data/ironmarch.pth", 
+                                threshold = 2,
+                                load=True,
+                                save=True,
+                                loadBow=True,
+                                saveBow=True,
+                                Bow=True):
     '''
     Returns pytorch geometric graph data object created from IronMarch message post data
     and the ids list to look up user database ids
@@ -23,9 +25,15 @@ def get_ironmarch_network_data(
     to be created between the two users
     '''
 
+    successful_load = False
     if load and data_path != None:
-        data, ids = torch.load(data_path)
-    else:
+        try:
+            data, ids = torch.load(data_path)
+            successful_load = True
+        except:
+            print(f"load failed for file {data_path} -- creating dataset")
+
+    if not successful_load:
         posts = pd.read_csv(posts_path)
         topics = pd.read_csv(topics_path)
 
@@ -60,16 +68,18 @@ def get_ironmarch_network_data(
         edge_index = torch.tensor(edge_index, dtype=torch.long)
         edge_index = edge_index.t().contiguous() # this is what pytorch geometric wants
 
-        # just going to give each user a feature vector of 1 until we get bag of words
-        # x = torch.ones((len(authors), 1))
-        # x = torch.ones((len(authors), 2))
-        bow, vocab, post_authors = get_bag_of_words(posts_path, topics_path) # How to place it in so the model will train?
-        assert(len(authors) == len(post_authors))
+        if Bow:
+            # use bag of word features for each user
+            bow, vocab, post_authors = get_bag_of_words(posts_path, topics_path, load=loadBow, save=saveBow) # How to place it in so the model will train?
+            assert(len(authors) == len(post_authors))
 
-        vocab_size = len(vocab)
-        x = torch.zeros((len(authors), vocab_size))
-        for idx, author in enumerate(post_authors):
-            x[ids.index(author)] = torch.tensor(bow[idx])
+            vocab_size = len(vocab)
+            x = torch.zeros((len(authors), vocab_size))
+            for idx, author in enumerate(post_authors):
+                x[ids.index(author)] = torch.tensor(bow[idx])
+        else:
+            # essentially don't use user features
+            x = torch.ones((len(authors), 1))
 
         data = Data(x=x, edge_index=edge_index)
 
@@ -79,4 +89,7 @@ def get_ironmarch_network_data(
     return data, ids
 
 if __name__ == "__main__":
-    get_ironmarch_network_data(load=False)
+    # get_ironmarch_network_data(load=False, loadBow=False, save=True,
+    # #  posts_path="./data/iron_march_201911/csv/core_message_posts.csv", topics_path="./data/iron_march_201911/csv/core_message_topics.csv"
+    #  )
+    get_ironmarch_network_data(threshold=10, data_path="./data/ironmarch_10.pth")
