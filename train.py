@@ -5,6 +5,7 @@ from pathlib import Path
 import os
 import torch
 import copy
+from tqdm import tqdm
 
 class Trainer():
     def __init__(self, model, optimizer, device, name, load_state_path=None):
@@ -29,7 +30,8 @@ class Trainer():
         self.test_aucs = []
 
         best_model_state = None
-
+        
+        pbar = tqdm(total=epochs)
         for epoch in range(1, epochs):
             loss, train_auc = train_epoch(self.model, self.optimizer, self.device, data)
             val_loss, val_auc, test_loss, tmp_test_auc = test(self.model, self.device, data)
@@ -46,10 +48,11 @@ class Trainer():
             self.test_losses.append(test_loss.item())
             self.test_aucs.append(tmp_test_auc)
 
-            print(f'Epoch: {epoch:03d}, Loss: {loss:.4f}, Train: {train_auc:.4f}, Val: {val_auc:.4f}, '
+            pbar.set_description(f'Epoch: {epoch:03d}, Loss: {loss:.4f}, Train: {train_auc:.4f}, Val: {val_auc:.4f}, '
                 f'Test: {tmp_test_auc:.4f}')
 
-        
+            pbar.update(1)
+        pbar.close()
         self.plotLearningCurves()
         
         # save model
