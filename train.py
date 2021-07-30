@@ -23,18 +23,21 @@ class Trainer():
     def train(self, data, epochs=101):
         self.best_val_auc = self.test_auc = 0
         self.train_losses = []
+        self.train_accs = []
         self.valid_losses = []
+        self.valid_accs = []
         self.test_losses = []
         self.train_aucs = []
         self.valid_aucs = []
         self.test_aucs = []
+        self.test_accs = []
 
         best_model_state = None
         
         pbar = tqdm(total=epochs)
         for epoch in range(1, epochs):
-            loss, train_auc = train_epoch(self.model, self.optimizer, self.device, data)
-            val_loss, val_auc, test_loss, tmp_test_auc = test(self.model, self.device, data)
+            loss, train_auc, train_acc = train_epoch(self.model, self.optimizer, self.device, data)
+            val_loss, val_auc, val_acc, test_loss, tmp_test_auc, test_acc = test(self.model, self.device, data)
             if val_auc > self.best_val_auc:
                 self.best_val_auc = val_auc
                 self.test_auc = tmp_test_auc
@@ -43,13 +46,16 @@ class Trainer():
 
             self.train_losses.append(loss.item())
             self.train_aucs.append(train_auc)
+            self.train_accs.append(train_acc)
             self.valid_losses.append(val_loss.item())
             self.valid_aucs.append(val_auc)
+            self.valid_accs.append(val_acc)
             self.test_losses.append(test_loss.item())
             self.test_aucs.append(tmp_test_auc)
+            self.test_accs.append(test_acc)
 
-            pbar.set_description(f'Epoch: {epoch:03d}, Loss: {loss:.4f}, Train: {train_auc:.4f}, Val: {val_auc:.4f}, '
-                f'Test: {tmp_test_auc:.4f}')
+            pbar.set_description(f'Epoch: {epoch:03d}, Loss: {loss:.4f}, Train: {train_acc:.4f}, Val: {val_acc:.4f}, '
+                f'Test: {test_acc:.4f}')
 
             pbar.update(1)
         pbar.close()
@@ -64,6 +70,7 @@ class Trainer():
     def plotLearningCurves(self):
         self.plotLearningCurve("loss", self.train_losses, self.valid_losses, self.test_losses)
         self.plotLearningCurve("AUC", self.train_aucs, self.valid_aucs, self.test_aucs)
+        self.plotLearningCurve("accuracy", train=None, valid=self.valid_acc, test=self.test_acc)
 
     def plotLearningCurve(self, title, train, valid, test):
 

@@ -3,13 +3,13 @@
 # https://github.com/rusty1s/pytorch_geometric/blob/master/examples/link_pred.py
 import torch
 import torch.nn.functional as F
-from sklearn.metrics import roc_auc_score
+from sklearn.metrics import roc_auc_score, accuracy_score
 
 from torch_geometric.utils import negative_sampling
 from torch_geometric.datasets import Planetoid
 import torch_geometric.transforms as T
 from torch_geometric.nn import GCNConv
-from torch_geometric.utils import train_test_split_edges
+from torch_geometric.utils import train_test_split_edges, accuracy
 
 
 class Net(torch.nn.Module):
@@ -63,9 +63,11 @@ def train_epoch(model, optimizer, device, data):
     loss.backward()
     optimizer.step()
 
-    train_auc = roc_auc_score(link_labels.cpu().detach().numpy(), link_logits.sigmoid().cpu().detach().numpy())
+    link_probs = link_logits.sigmoid()
+    train_auc = roc_auc_score(link_labels.cpu().detach().numpy(), link_probs.cpu().detach().numpy())
+    train_acc = accuracy(link_labels, (link_probs > .5))
 
-    return loss, train_auc
+    return loss, train_auc, train_acc
 
 
 @torch.no_grad()
@@ -84,4 +86,5 @@ def test(model, device, data):
         loss = F.binary_cross_entropy_with_logits(link_logits, link_labels)
         results.append(loss)
         results.append(roc_auc_score(link_labels.cpu(), link_probs.cpu()))
+        results.append(accuracy(link_labels, (link_probs > .5)))
     return results

@@ -9,7 +9,7 @@ import torch
 from torch_geometric.utils import train_test_split_edges
 
 if __name__ == "__main__":
-    data, _ = get_ironmarch_network_data(threshold=5, load=False, data_path="./data/ironmarch_5.pth")
+    data, _ = get_ironmarch_network_data(threshold=5, load=True, data_path="./data/ironmarch_5.pth")
     data = train_test_split_edges(data)
     num_features = data.x.shape[1]
 
