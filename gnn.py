@@ -16,10 +16,11 @@ class Net(torch.nn.Module):
     def __init__(self, in_channels, out_channels):
         super(Net, self).__init__()
         self.conv1 = GCNConv(in_channels, 128)
-        self.conv3 = GCNConv(128, 512)
-        self.conv4 = GCNConv(512, 1024)
-        self.conv5 = GCNConv(1024, 128)
-        self.conv2 = GCNConv(128, out_channels)
+        self.conv3 = GCNConv(128, 1024)
+        self.conv4 = GCNConv(1024, 1024)
+        self.conv5 = GCNConv(1024, 1024)
+        self.conv6 = GCNConv(1024, 1024)
+        self.conv2 = GCNConv(1024, out_channels)
 
     def encode(self, x, edge_index):
         x = self.conv1(x, edge_index)
@@ -29,6 +30,8 @@ class Net(torch.nn.Module):
         x = self.conv4(x, edge_index)
         x = x.relu()
         x = self.conv5(x, edge_index)
+        x = x.relu()
+        x = self.conv6(x, edge_index)
         x = x.relu()
         return self.conv2(x, edge_index)
 

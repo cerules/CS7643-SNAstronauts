@@ -66,16 +66,16 @@ class Trainer():
         torch.save(self.model.state_dict(), os.path.join(self.basePath, "final.pth"))
 
         # save loss arrays
-        self._save_loss_arrays(self.train_losses, self.train_aucs, 
-                                self.valid_losses, self.valid_aucs, 
-                                self.test_losses, self.test_aucs)
+        self._save_loss_arrays(self.train_losses, self.train_aucs, self.train_accs, 
+                                self.valid_losses, self.valid_aucs, self.valid_accs,
+                                self.test_losses, self.test_aucs, self.test_accs)
 
         print(f"best val auc: {self.best_val_auc}, test auc: {self.test_auc}")
 
     def plotLearningCurves(self):
         self.plotLearningCurve("loss", self.train_losses, self.valid_losses, self.test_losses)
         self.plotLearningCurve("AUC", self.train_aucs, self.valid_aucs, self.test_aucs)
-        self.plotLearningCurve("accuracy", train=train_accs, valid=self.valid_accs, test=self.test_accs)
+        self.plotLearningCurve("accuracy", train=self.train_accs, valid=self.valid_accs, test=self.test_accs)
 
     def plotLearningCurve(self, title, train, valid, test):
 
@@ -97,10 +97,14 @@ class Trainer():
         fig.savefig(f"./output/{self.name}/{title}.png")
         plt.show()
 
-    def _save_loss_arrays(self, train_losses, train_aucs, valid_losses, valid_aucs, test_losses, test_aucs):
+    def _save_loss_arrays(self, train_losses, train_aucs, train_accs, valid_losses, valid_aucs, valid_accs, test_losses, test_aucs, test_accs):
         np.save('./output/train_losses.npy', (train_losses))
         np.save('./output/train_aucs.npy', (train_aucs))
+        np.save('./output/train_accs.npy', (train_accs))
         np.save('./output/valid_losses.npy', (valid_losses))
         np.save('./output/valid_aucs.npy', (valid_aucs))
+        np.save('./output/valid_accs.npy', (valid_accs))
         np.save('./output/test_losses.npy', (test_losses))
         np.save('./output/test_aucs.npy', (test_aucs))
+        np.save('./output/test_aucs.npy', (test_accs))
+
