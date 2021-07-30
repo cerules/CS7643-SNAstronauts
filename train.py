@@ -70,7 +70,7 @@ class Trainer():
     def plotLearningCurves(self):
         self.plotLearningCurve("loss", self.train_losses, self.valid_losses, self.test_losses)
         self.plotLearningCurve("AUC", self.train_aucs, self.valid_aucs, self.test_aucs)
-        self.plotLearningCurve("accuracy", train=None, valid=self.valid_acc, test=self.test_acc)
+        self.plotLearningCurve("accuracy", train=train_accs, valid=self.valid_accs, test=self.test_accs)
 
     def plotLearningCurve(self, title, train, valid, test):
 
