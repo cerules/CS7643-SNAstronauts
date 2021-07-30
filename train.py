@@ -60,10 +60,15 @@ class Trainer():
             pbar.update(1)
         pbar.close()
         self.plotLearningCurves()
-        
+
         # save model
         torch.save(best_model_state, os.path.join(self.basePath, "best.pth"))
         torch.save(self.model.state_dict(), os.path.join(self.basePath, "final.pth"))
+
+        # save loss arrays
+        self._save_loss_arrays(self.train_losses, self.train_aucs, 
+                                self.valid_losses, self.valid_aucs, 
+                                self.test_losses, self.test_aucs)
 
         print(f"best val auc: {self.best_val_auc}, test auc: {self.test_auc}")
 
@@ -92,3 +97,10 @@ class Trainer():
         fig.savefig(f"./output/{self.name}/{title}.png")
         plt.show()
 
+    def _save_loss_arrays(self, train_losses, train_aucs, valid_losses, valid_aucs, test_losses, test_aucs):
+        np.save('./output/train_losses.npy', (train_losses))
+        np.save('./output/train_aucs.npy', (train_aucs))
+        np.save('./output/valid_losses.npy', (valid_losses))
+        np.save('./output/valid_aucs.npy', (valid_aucs))
+        np.save('./output/test_losses.npy', (test_losses))
+        np.save('./output/test_aucs.npy', (test_aucs))
