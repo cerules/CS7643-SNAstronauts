@@ -92,4 +92,4 @@ if __name__ == "__main__":
     # get_ironmarch_network_data(load=False, loadBow=False, save=True,
     # #  posts_path="./data/iron_march_201911/csv/core_message_posts.csv", topics_path="./data/iron_march_201911/csv/core_message_topics.csv"
     #  )
-    get_ironmarch_network_data(threshold=10, data_path="./data/ironmarch_10.pth")
+    get_ironmarch_network_data(threshold=50, data_path="./data/ironmarch_50.pth", load=False, loadBow=False)
