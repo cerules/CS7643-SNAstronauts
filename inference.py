@@ -1,10 +1,10 @@
 
-# import networkx as nx
+import networkx as nx
 import matplotlib.pyplot as plt
 from data import get_ironmarch_network_data
 import torch
 from gnn import Net
-
+import numpy as np
 
 def inference():
 
@@ -18,15 +18,24 @@ def inference():
 
     z = model.encode(data.x, data.edge_index)
     inferred_edge_index = model.decode_all(z)
-
+    draw_graph(inferred_edge_index)
     print(inferred_edge_index)
 
-
+def draw_graph(edge_index, filename="test_el.csv"):
+    G = nx.Graph()
+    for edge in range(edge_index.shape[1]):
+        G.add_edge(edge_index[0][edge].item(), edge_index[1][edge].item())
+    nx.write_edgelist(G, filename, delimiter=',')
+    # fig, ax = plt.subplots()
+    #
+    # nx.draw(G)
+    #
+    # plt.show()
 # def draw_graph(edge_index):
 #     G = nx.Graph()
 
 #     for edge in range(edge_index.shape[1]):
-#         G.add_edge(edge_index[0][edge], edge_index[1][edge])    
+#         G.add_edge(edge_index[0][edge], edge_index[1][edge])
 
 #     fig, ax = plt.subplots()
 
