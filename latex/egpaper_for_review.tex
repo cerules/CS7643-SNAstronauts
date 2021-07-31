@@ -59,7 +59,21 @@ First line of institution2 address\\
 \end{abstract}
 
 %%%%%%%%% BODY TEXT
-\section{Introduction/Background/Motivation}
+\section{Introduction}
+
+In 2019, an anonymous account published the entire database of the Iron March far-right extremist web forum on archive.org. This database gave researchers unprecedented access to the internal discussions, organizing strategies, and ideological  development of some of the most dangerous terrorist networks active in the West. Since the leak, analysts have dug through the data to investigate extreme posting behaviors and community creation, and law enforcement have leveraged it in cases against actual and would-be terrorists. 
+
+With hundreds of thousands of forum posts and direct messages, Iron March also represents a uniquely rich dataset for exploring algorithmic methods for extremism research and counterextremism. As an insular social network, the website's data contains information about how far-right extremists connect with one another and organize for real-world action, both as loose political movements and as discrete terrorist cells. While extensive qualitative work has revealed a trove of significant findings about the social network aspect of Iron March, there has been little research done on the application of automated, predictive methods to the data.
+
+In this paper, we investigate the use of graph neural networks (GNN) to learn social structures from the Iron March data and apply those learnings to predict the creation of new relationships. We explore the impact of node attributes and different GNN architectures, and we find that GNNs show strong potential for use in the extremism research domain. We also propose several areas where future work can build on these findings.
+
+\section{Previous Work}
+
+In recent years, GNNs have proven capable of achieving high performance across a number of graph-related tasks, from edge and node classification to edge prediction. In this paper, we focus on the use of deep learning methods for edge prediction, while incorporating some findings from other tasks as well.
+
+Edge (or link) prediction has long been reliant on statistical metrics that may not pick up on many nuances in structure. Early machine learning-based edge prediction work relied on similarity metrics, as described in Liben-Nowell and Kleinberg~\cite{linkpred2007}. In 2017, Schlichtkrull \etal~\cite{schlichtkrull2017modeling} pioneered the use of graph convolutional networks (GCN) for the edge prediction task, building on the GCN framework proposed by Duvenaud \etal~\cite{Duvenaud} and establishing the practice of autoencoding graph data. With SEAL, Zhang and Chen~\cite{SEAL} 
+
+
 
 (5 points) What did you try to do? What problem did you try to solve? Articulate your objectives using absolutely no jargon. 
 
