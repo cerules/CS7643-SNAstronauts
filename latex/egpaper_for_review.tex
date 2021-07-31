@@ -77,14 +77,17 @@ Gu \etal~\cite{graphattention} reached state-of-the-art results on link predicti
 
 Zhang \etal~\cite{zhang} describe a method for adding additional knowledge into a graph to assist with link prediction. The authors analyzed a citation graph and used named entity recognition to add additional knowledge edges to the graph. This combats the sparsity problem that is common in most real world graph data. Further extending the idea of mining text for use in supplementing graph data, Zhang \etal~\cite{zhang} used a bag of words approach to construct node features.
 
+\section{Dataset}
 
-(5 points) What did you try to do? What problem did you try to solve? Articulate your objectives using absolutely no jargon. 
+The Iron March database is real-world data: it was generated as a byproduct of people interacting with the website and one another, and it was not designed for the purpose of training machine learning models. In order to train the GNN models, we use the essential data in the database: forum posts and direct messages. These represent the thoughts and connections of Iron March's users over the entire course of the website's existence from 2011-2017. 
 
-(5 points) How is it done today, and what are the limits of current practice?
+We train and validate the models on the set of forum posts. These posts are "threaded" in a similar structure to Reddit or 4chan posts, which allows for the generation of a social network based on shared interactions within threads. There are over 195,000 forum posts in total, of which roughly 182,000 have an identifiable author and are thus usable. Forum posts consist of a number of features, but for the purposes of this paper we focus on three: the raw text of the post, the author ID, and the thread ID. 
 
-(5 points) Who cares? If you are successful, what difference will it make? 
+In addition, we use Iron March's direct message data in order to further explore the capabilities of the model. There are about 22,300 direct messages, of which roughly 21,000 have an identifiable author. Like forum posts, messages are identified by a thread ID, facilitating the creation of an edgelist.
 
-(5 points) What data did you use? Provide details about your data, specifically choose the most important aspects of your data mentioned \href{https://arxiv.org/abs/1803.09010}{here}. You don’t have to choose all of them, just the most relevant.
+The full Iron March dataset contains sensitive data, including political beliefs, ages, names, locations, email addresses, and other social account data. The data was leaked without consent of the data subjects, further adding to its sensitivity. However, the dataset has been extensively published and covered in both reputable news sources and academic writing, and it has been used in government documents for the purpose of justifying indictments. Many of its subjects have been widely identified in the media. 
+
+We carefully use this data by not including personal information (beyond that which may incidentally arise in forum or message posts) in training the models. In addition, we do not identify any subject in subsequent analysis who has not already been identified in the public record, either through arrest warrants or coverage in reputable sources.
 %-------------------------------------------------------------------------
 %------------------------------------------------------------------------
 \section{Approach}
