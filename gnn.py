@@ -1,4 +1,3 @@
-
 # from Pytorch Geometric link prediction example
 # https://github.com/rusty1s/pytorch_geometric/blob/master/examples/link_pred.py
 import torch
@@ -10,7 +9,6 @@ from torch_geometric.datasets import Planetoid
 import torch_geometric.transforms as T
 from torch_geometric.nn import GCNConv
 from torch_geometric.utils import train_test_split_edges, accuracy
-
 
 class Net(torch.nn.Module):
     def __init__(self, in_channels, out_channels):
@@ -43,13 +41,11 @@ class Net(torch.nn.Module):
         prob_adj = z @ z.t()
         return (prob_adj > 0).nonzero(as_tuple=False).t()
 
-
 def get_link_labels(pos_edge_index, neg_edge_index, device):
     num_links = pos_edge_index.size(1) + neg_edge_index.size(1)
     link_labels = torch.zeros(num_links, dtype=torch.float, device=device)
     link_labels[:pos_edge_index.size(1)] = 1.
     return link_labels
-
 
 def train_epoch(model, optimizer, device, data):
     model.train()
@@ -71,7 +67,6 @@ def train_epoch(model, optimizer, device, data):
     train_acc = accuracy(link_labels, (link_probs > .5))
 
     return loss, train_auc, train_acc
-
 
 @torch.no_grad()
 def test(model, device, data):

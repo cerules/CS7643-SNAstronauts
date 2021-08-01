@@ -54,8 +54,8 @@ class Trainer():
             self.test_aucs.append(tmp_test_auc)
             self.test_accs.append(test_acc)
 
-            pbar.set_description(f'Epoch: {epoch:03d}, Loss: {loss:.4f}, Train: {train_acc:.4f}, Val: {val_acc:.4f}, '
-                f'Test: {test_acc:.4f}')
+            pbar.set_description(f"Epoch: {epoch:03d}, Loss: {loss:.4f}, Train: {train_acc:.4f}, Val: {val_acc:.4f}, "
+                f"Test: {test_acc:.4f}")
 
             pbar.update(1)
         pbar.close()
@@ -98,13 +98,12 @@ class Trainer():
         plt.show()
 
     def _save_loss_arrays(self, train_losses, train_aucs, train_accs, valid_losses, valid_aucs, valid_accs, test_losses, test_aucs, test_accs):
-        np.save('./output/train_losses.npy', (train_losses))
-        np.save('./output/train_aucs.npy', (train_aucs))
-        np.save('./output/train_accs.npy', (train_accs))
-        np.save('./output/valid_losses.npy', (valid_losses))
-        np.save('./output/valid_aucs.npy', (valid_aucs))
-        np.save('./output/valid_accs.npy', (valid_accs))
-        np.save('./output/test_losses.npy', (test_losses))
-        np.save('./output/test_aucs.npy', (test_aucs))
-        np.save('./output/test_aucs.npy', (test_accs))
-
+        np.save("./output/train_losses.npy", (train_losses))
+        np.save("./output/train_aucs.npy", (train_aucs))
+        np.save("./output/train_accs.npy", (train_accs))
+        np.save("./output/valid_losses.npy", (valid_losses))
+        np.save("./output/valid_aucs.npy", (valid_aucs))
+        np.save("./output/valid_accs.npy", (valid_accs))
+        np.save("./output/test_losses.npy", (test_losses))
+        np.save("./output/test_aucs.npy", (test_aucs))
+        np.save("./output/test_aucs.npy", (test_accs))

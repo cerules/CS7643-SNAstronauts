@@ -1,4 +1,3 @@
-
 # from Pytorch Geometric link prediction example
 # https://github.com/rusty1s/pytorch_geometric/blob/master/examples/link_pred.py
 
@@ -13,7 +12,7 @@ if __name__ == "__main__":
     data = train_test_split_edges(data)
     num_features = data.x.shape[1]
 
-    device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
+    device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
     model = Net(num_features, 64).to(device)
     data = data.to(device)
     optimizer = torch.optim.Adam(params=model.parameters(), lr=0.01)
