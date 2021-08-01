@@ -1,14 +1,12 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2021.6.24)  31 JUL 2021 12:40
+This is pdfTeX, Version 3.141592653-2.6-1.40.23 (MiKTeX 21.7) (preloaded format=pdflatex 2021.8.1)  1 AUG 2021 18:34
 entering extended mode
- restricted \write18 enabled.
- %&-line parsing enabled.
-**egpaper_for_review.tex
-(./egpaper_for_review.tex
+**./egpaper_for_review.tex
+(egpaper_for_review.tex
 LaTeX2e <2021-06-01> patch level 1
-L3 programming layer <2021-06-18>
-(/Users/alexnewhouse/Library/TinyTeX/texmf-dist/tex/latex/base/article.cls
+L3 programming layer <2021-07-12>
+(C:\Users\chris\AppData\Local\Programs\MiKTeX\tex/latex/base\article.cls
 Document Class: article 2021/02/12 v1.4n Standard LaTeX document class
-(/Users/alexnewhouse/Library/TinyTeX/texmf-dist/tex/latex/base/size10.clo
+(C:\Users\chris\AppData\Local\Programs\MiKTeX\tex/latex/base\size10.clo
 File: size10.clo 2021/02/12 v1.4n Standard LaTeX file (size option)
 )
 \c@part=\count182
@@ -23,18 +21,18 @@ File: size10.clo 2021/02/12 v1.4n Standard LaTeX file (size option)
 \belowcaptionskip=\skip48
 \bibindent=\dimen138
 )
-(./cvpr.sty (./eso-pic.sty
+(cvpr.sty (eso-pic.sty
 Package: eso-pic 2002/11/16 v1.1b eso-pic (RN)
- (./cvpr_eso.sty
+ (cvpr_eso.sty
 
 LaTeX Warning: You have requested package `eso-pic',
                but the package provides `everyshi'.
 
 Package: everyshi 2001/05/15 v3.00 EveryShipout Package (MS)
-) (/Users/alexnewhouse/Library/TinyTeX/texmf-dist/tex/latex/graphics/keyval.sty
+) (C:\Users\chris\AppData\Local\Programs\MiKTeX\tex/latex/graphics\keyval.sty
 Package: keyval 2014/10/28 v1.15 key=value parser (DPC)
 \KV@toks@=\toks16
-)) (/Users/alexnewhouse/Library/TinyTeX/texmf-dist/tex/latex/tools/xspace.sty
+)) (C:\Users\chris\AppData\Local\Programs\MiKTeX\tex/latex/tools\xspace.sty
 Package: xspace 2014/10/28 v1.13 Space after command names (DPC,MH)
 )
 CVPR 8.5 x 11-Inch Proceedings Style `cvpr.sty'.
@@ -50,28 +48,28 @@ CVPR 8.5 x 11-Inch Proceedings Style `cvpr.sty'.
 \cv@tot=\count192
 \cv@tmpc@=\count193
 \cv@tmpc=\count194
-) (/Users/alexnewhouse/Library/TinyTeX/texmf-dist/tex/latex/psnfss/times.sty
+) (C:\Users\chris\AppData\Local\Programs\MiKTeX\tex/latex/psnfss\times.sty
 Package: times 2020/03/25 PSNFSS-v9.3 (SPQR) 
 )
-(/Users/alexnewhouse/Library/TinyTeX/texmf-dist/tex/latex/graphics/epsfig.sty
+(C:\Users\chris\AppData\Local\Programs\MiKTeX\tex/latex/graphics\epsfig.sty
 Package: epsfig 2017/06/25 v1.7b (e)psfig emulation (SPQR)
 
-(/Users/alexnewhouse/Library/TinyTeX/texmf-dist/tex/latex/graphics/graphicx.sty
+(C:\Users\chris\AppData\Local\Programs\MiKTeX\tex/latex/graphics\graphicx.sty
 Package: graphicx 2020/12/05 v1.2c Enhanced LaTeX Graphics (DPC,SPQR)
 
-(/Users/alexnewhouse/Library/TinyTeX/texmf-dist/tex/latex/graphics/graphics.sty
+(C:\Users\chris\AppData\Local\Programs\MiKTeX\tex/latex/graphics\graphics.sty
 Package: graphics 2021/03/04 v1.4d Standard LaTeX Graphics (DPC,SPQR)
-(/Users/alexnewhouse/Library/TinyTeX/texmf-dist/tex/latex/graphics/trig.sty
+
+(C:\Users\chris\AppData\Local\Programs\MiKTeX\tex/latex/graphics\trig.sty
 Package: trig 2016/01/03 v1.10 sin cos tan (DPC)
 )
-(/Users/alexnewhouse/Library/TinyTeX/texmf-dist/tex/latex/graphics-cfg/graphics
-.cfg
+(C:\Users\chris\AppData\Local\Programs\MiKTeX\tex/latex/graphics-cfg\graphics.c
+fg
 File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
 )
 Package graphics Info: Driver file: pdftex.def on input line 107.
 
-(/Users/alexnewhouse/Library/TinyTeX/texmf-dist/tex/latex/graphics-def/pdftex.d
-ef
+(C:\Users\chris\AppData\Local\Programs\MiKTeX\tex/latex/graphics-def\pdftex.def
 File: pdftex.def 2020/10/05 v1.2a Graphics/color driver for pdftex
 ))
 \Gin@req@height=\dimen142
@@ -80,24 +78,24 @@ File: pdftex.def 2020/10/05 v1.2a Graphics/color driver for pdftex
 \epsfxsize=\dimen144
 \epsfysize=\dimen145
 )
-(/Users/alexnewhouse/Library/TinyTeX/texmf-dist/tex/latex/amsmath/amsmath.sty
+(C:\Users\chris\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amsmath.sty
 Package: amsmath 2021/04/20 v2.17j AMS math features
 \@mathmargin=\skip51
 
 For additional information on amsmath, use the `?' option.
-(/Users/alexnewhouse/Library/TinyTeX/texmf-dist/tex/latex/amsmath/amstext.sty
+(C:\Users\chris\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amstext.sty
 Package: amstext 2000/06/29 v2.01 AMS text
 
-(/Users/alexnewhouse/Library/TinyTeX/texmf-dist/tex/latex/amsmath/amsgen.sty
+(C:\Users\chris\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amsgen.sty
 File: amsgen.sty 1999/11/30 v2.0 generic functions
 \@emptytoks=\toks17
 \ex@=\dimen146
 ))
-(/Users/alexnewhouse/Library/TinyTeX/texmf-dist/tex/latex/amsmath/amsbsy.sty
+(C:\Users\chris\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amsbsy.sty
 Package: amsbsy 1999/11/29 v1.2d Bold Symbols
 \pmbraise@=\dimen147
 )
-(/Users/alexnewhouse/Library/TinyTeX/texmf-dist/tex/latex/amsmath/amsopn.sty
+(C:\Users\chris\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amsopn.sty
 Package: amsopn 2016/03/08 v2.02 operator names
 )
 \inf@bad=\count195
@@ -138,88 +136,84 @@ LaTeX Font Info:    Redeclaring font encoding OMS on input line 744.
 LaTeX Info: Redefining \[ on input line 2923.
 LaTeX Info: Redefining \] on input line 2924.
 )
-(/Users/alexnewhouse/Library/TinyTeX/texmf-dist/tex/latex/amsfonts/amssymb.sty
+(C:\Users\chris\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\amssymb.sty
 Package: amssymb 2013/01/14 v3.01 AMS font symbols
 
-(/Users/alexnewhouse/Library/TinyTeX/texmf-dist/tex/latex/amsfonts/amsfonts.sty
+(C:\Users\chris\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\amsfonts.sty
 Package: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
 \symAMSa=\mathgroup4
 \symAMSb=\mathgroup5
 LaTeX Font Info:    Redeclaring math symbol \hbar on input line 98.
 LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
 (Font)                  U/euf/m/n --> U/euf/b/n on input line 106.
-))
-(/Users/alexnewhouse/Library/TinyTeX/texmf-dist/tex/latex/hyperref/hyperref.sty
+)) (C:\Users\chris\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\hyperref.st
+y
 Package: hyperref 2021-06-07 v7.00m Hypertext links for LaTeX
 
-(/Users/alexnewhouse/Library/TinyTeX/texmf-dist/tex/generic/ltxcmds/ltxcmds.sty
+(C:\Users\chris\AppData\Local\Programs\MiKTeX\tex/generic/ltxcmds\ltxcmds.sty
 Package: ltxcmds 2020-05-10 v1.25 LaTeX kernel commands for general use (HO)
-) (/Users/alexnewhouse/Library/TinyTeX/texmf-dist/tex/generic/iftex/iftex.sty
+)
+(C:\Users\chris\AppData\Local\Programs\MiKTeX\tex/generic/iftex\iftex.sty
 Package: iftex 2020/03/06 v1.0d TeX engine tests
 )
-(/Users/alexnewhouse/Library/TinyTeX/texmf-dist/tex/generic/pdftexcmds/pdftexcm
-ds.sty
+(C:\Users\chris\AppData\Local\Programs\MiKTeX\tex/generic/pdftexcmds\pdftexcmds
+.sty
 Package: pdftexcmds 2020-06-27 v0.33 Utility functions of pdfTeX for LuaTeX (HO
 )
 
-(/Users/alexnewhouse/Library/TinyTeX/texmf-dist/tex/generic/infwarerr/infwarerr
-.sty
+(C:\Users\chris\AppData\Local\Programs\MiKTeX\tex/generic/infwarerr\infwarerr.s
+ty
 Package: infwarerr 2019/12/03 v1.5 Providing info/warning/error messages (HO)
 )
 Package pdftexcmds Info: \pdf@primitive is available.
 Package pdftexcmds Info: \pdf@ifprimitive is available.
 Package pdftexcmds Info: \pdfdraftmode found.
 )
-(/Users/alexnewhouse/Library/TinyTeX/texmf-dist/tex/generic/kvsetkeys/kvsetkeys
-.sty
+(C:\Users\chris\AppData\Local\Programs\MiKTeX\tex/generic/kvsetkeys\kvsetkeys.s
+ty
 Package: kvsetkeys 2019/12/15 v1.18 Key value parser (HO)
 )
-(/Users/alexnewhouse/Library/TinyTeX/texmf-dist/tex/generic/kvdefinekeys/kvdefi
-nekeys.sty
+(C:\Users\chris\AppData\Local\Programs\MiKTeX\tex/generic/kvdefinekeys\kvdefine
+keys.sty
 Package: kvdefinekeys 2019-12-19 v1.6 Define keys (HO)
 )
-(/Users/alexnewhouse/Library/TinyTeX/texmf-dist/tex/generic/pdfescape/pdfescape
-.sty
+(C:\Users\chris\AppData\Local\Programs\MiKTeX\tex/generic/pdfescape\pdfescape.s
+ty
 Package: pdfescape 2019/12/09 v1.15 Implements pdfTeX's escape features (HO)
-)
-(/Users/alexnewhouse/Library/TinyTeX/texmf-dist/tex/latex/hycolor/hycolor.sty
+) (C:\Users\chris\AppData\Local\Programs\MiKTeX\tex/latex/hycolor\hycolor.sty
 Package: hycolor 2020-01-27 v1.10 Color options for hyperref/bookmark (HO)
 )
-(/Users/alexnewhouse/Library/TinyTeX/texmf-dist/tex/latex/letltxmacro/letltxmac
-ro.sty
+(C:\Users\chris\AppData\Local\Programs\MiKTeX\tex/latex/letltxmacro\letltxmacro
+.sty
 Package: letltxmacro 2019/12/03 v1.6 Let assignment for LaTeX macros (HO)
 )
-(/Users/alexnewhouse/Library/TinyTeX/texmf-dist/tex/latex/auxhook/auxhook.sty
+(C:\Users\chris\AppData\Local\Programs\MiKTeX\tex/latex/auxhook\auxhook.sty
 Package: auxhook 2019-12-17 v1.6 Hooks for auxiliary files (HO)
 )
-(/Users/alexnewhouse/Library/TinyTeX/texmf-dist/tex/latex/kvoptions/kvoptions.s
-ty
+(C:\Users\chris\AppData\Local\Programs\MiKTeX\tex/latex/kvoptions\kvoptions.sty
 Package: kvoptions 2020-10-07 v3.14 Key value format for package options (HO)
 )
 \@linkdim=\dimen155
 \Hy@linkcounter=\count273
 \Hy@pagecounter=\count274
-
-(/Users/alexnewhouse/Library/TinyTeX/texmf-dist/tex/latex/hyperref/pd1enc.def
+ (C:\Users\chris\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\pd1enc.def
 File: pd1enc.def 2021-06-07 v7.00m Hyperref: PDFDocEncoding definition (HO)
 Now handling font encoding PD1 ...
 ... no UTF-8 mapping file for font encoding PD1
 )
-(/Users/alexnewhouse/Library/TinyTeX/texmf-dist/tex/latex/hyperref/hyperref-lan
-gpatches.def
+(C:\Users\chris\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\hyperref-langp
+atches.def
 File: hyperref-langpatches.def 2021-06-07 v7.00m Hyperref: patches for babel la
 nguages
 )
-(/Users/alexnewhouse/Library/TinyTeX/texmf-dist/tex/generic/intcalc/intcalc.sty
+(C:\Users\chris\AppData\Local\Programs\MiKTeX\tex/generic/intcalc\intcalc.sty
 Package: intcalc 2019/12/15 v1.3 Expandable calculations with integers (HO)
 )
-(/Users/alexnewhouse/Library/TinyTeX/texmf-dist/tex/generic/etexcmds/etexcmds.s
-ty
+(C:\Users\chris\AppData\Local\Programs\MiKTeX\tex/generic/etexcmds\etexcmds.sty
 Package: etexcmds 2019/12/15 v1.7 Avoid name clashes with e-TeX commands (HO)
 )
 \Hy@SavedSpaceFactor=\count275
-
-(/Users/alexnewhouse/Library/TinyTeX/texmf-dist/tex/latex/hyperref/puenc.def
+ (C:\Users\chris\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\puenc.def
 File: puenc.def 2021-06-07 v7.00m Hyperref: PDF Unicode definition (HO)
 Now handling font encoding PU ...
 ... no UTF-8 mapping file for font encoding PU
@@ -238,25 +232,24 @@ Package hyperref Info: Plain pages OFF on input line 4207.
 Package hyperref Info: Backreferencing ON on input line 4210.
 Package hyperref Info: Implicit mode ON; LaTeX internals redefined.
 Package hyperref Info: Bookmarks OFF on input line 4451.
-(/Users/alexnewhouse/Library/TinyTeX/texmf-dist/tex/latex/hyperref/backref.sty
+(C:\Users\chris\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\backref.sty
 Package: backref 2021/02/04 v1.41 Bibliographical back referencing
 
-(/Users/alexnewhouse/Library/TinyTeX/texmf-dist/tex/latex/rerunfilecheck/rerunf
-ilecheck.sty
+(C:\Users\chris\AppData\Local\Programs\MiKTeX\tex/latex/rerunfilecheck\rerunfil
+echeck.sty
 Package: rerunfilecheck 2019/12/05 v1.9 Rerun checks for auxiliary files (HO)
 
-(/Users/alexnewhouse/Library/TinyTeX/texmf-dist/tex/latex/base/atveryend-ltx.st
-y
+(C:\Users\chris\AppData\Local\Programs\MiKTeX\tex/latex/base\atveryend-ltx.sty
 Package: atveryend-ltx 2020/08/19 v1.0a Emulation of the original atvery packag
 e
 with kernel methods
 )
-(/Users/alexnewhouse/Library/TinyTeX/texmf-dist/tex/generic/uniquecounter/uniqu
-ecounter.sty
+(C:\Users\chris\AppData\Local\Programs\MiKTeX\tex/generic/uniquecounter\uniquec
+ounter.sty
 Package: uniquecounter 2019/12/15 v1.4 Provide unlimited unique counter (HO)
 
-(/Users/alexnewhouse/Library/TinyTeX/texmf-dist/tex/generic/bigintcalc/bigintca
-lc.sty
+(C:\Users\chris\AppData\Local\Programs\MiKTeX\tex/generic/bigintcalc\bigintcalc
+.sty
 Package: bigintcalc 2019/12/15 v1.5 Expandable calculations on big integers (HO
 )
 ))
@@ -264,15 +257,14 @@ Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
 86.
 ))
 \c@Hy@tempcnt=\count276
-
-(/Users/alexnewhouse/Library/TinyTeX/texmf-dist/tex/latex/url/url.sty
+ (C:\Users\chris\AppData\Local\Programs\MiKTeX\tex/latex/url\url.sty
 \Urlmuskip=\muskip17
 Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
 )
 LaTeX Info: Redefining \url on input line 4804.
 \XeTeXLinkMargin=\dimen156
 
-(/Users/alexnewhouse/Library/TinyTeX/texmf-dist/tex/generic/bitset/bitset.sty
+(C:\Users\chris\AppData\Local\Programs\MiKTeX\tex/generic/bitset\bitset.sty
 Package: bitset 2019/12/09 v1.3 Handle bit-vector datatype (HO)
 )
 \Fld@menulength=\count277
@@ -288,7 +280,7 @@ Package hyperref Info: PDF/A mode OFF on input line 6106.
 LaTeX Info: Redefining \ref on input line 6146.
 LaTeX Info: Redefining \pageref on input line 6150.
 
-(/Users/alexnewhouse/Library/TinyTeX/texmf-dist/tex/latex/base/atbegshi-ltx.sty
+(C:\Users\chris\AppData\Local\Programs\MiKTeX\tex/latex/base\atbegshi-ltx.sty
 Package: atbegshi-ltx 2021/01/10 v1.0c Emulation of the original atbegshi
 package with kernel methods
 )
@@ -297,8 +289,7 @@ package with kernel methods
 \c@Hfootnote=\count280
 )
 Package hyperref Info: Driver (autodetected): hpdftex.
-
-(/Users/alexnewhouse/Library/TinyTeX/texmf-dist/tex/latex/hyperref/hpdftex.def
+(C:\Users\chris\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\hpdftex.def
 File: hpdftex.def 2021-06-07 v7.00m Hyperref driver for pdfTeX
 \Fld@listcount=\count281
 \c@bookmark@seq@number=\count282
@@ -306,15 +297,23 @@ File: hpdftex.def 2021-06-07 v7.00m Hyperref driver for pdfTeX
 )
 LaTeX Font Info:    Trying to load font information for OT1+ptm on input line 2
 4.
-(/Users/alexnewhouse/Library/TinyTeX/texmf-dist/tex/latex/psnfss/ot1ptm.fd
+
+(C:\Users\chris\AppData\Local\Programs\MiKTeX\tex/latex/psnfss\ot1ptm.fd
 File: ot1ptm.fd 2001/06/04 font definitions for OT1/ptm.
 )
-(/Users/alexnewhouse/Library/TinyTeX/texmf-dist/tex/latex/l3backend/l3backend-p
-dftex.def
-File: l3backend-pdftex.def 2021-05-07 L3 backend support: PDF output (pdfTeX)
+(C:\Users\chris\AppData\Local\Programs\MiKTeX\tex/latex/l3backend\l3backend-pdf
+tex.def
+File: l3backend-pdftex.def 2021-07-12 L3 backend support: PDF output (pdfTeX)
 \l__color_backend_stack_int=\count283
 \l__pdf_internal_box=\box54
-) (./egpaper_for_review.aux)
+) (egpaper_for_review.aux
+
+LaTeX Warning: Label `fig:long' multiply defined.
+
+
+LaTeX Warning: Label `fig:onecol' multiply defined.
+
+)
 \openout1 = `egpaper_for_review.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 24.
@@ -336,780 +335,216 @@ LaTeX Font Info:    ... okay on input line 24.
 LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 24.
 LaTeX Font Info:    ... okay on input line 24.
  ABD: EveryShipout initializing macros
-(/Users/alexnewhouse/Library/TinyTeX/texmf-dist/tex/latex/graphics/color.sty
+(C:\Users\chris\AppData\Local\Programs\MiKTeX\tex/latex/graphics\color.sty
 Package: color 2020/02/24 v1.2b Standard LaTeX Color (DPC)
 
-(/Users/alexnewhouse/Library/TinyTeX/texmf-dist/tex/latex/graphics-cfg/color.cf
-g
+(C:\Users\chris\AppData\Local\Programs\MiKTeX\tex/latex/graphics-cfg\color.cfg
 File: color.cfg 2016/01/02 v1.6 sample color configuration
 )
 Package color Info: Driver file: pdftex.def on input line 149.
 )
-(/Users/alexnewhouse/Library/TinyTeX/texmf-dist/tex/latex/epstopdf-pkg/epstopdf
--base.sty
+(C:\Users\chris\AppData\Local\Programs\MiKTeX\tex/context/base/mkii\supp-pdf.mk
+ii
+[Loading MPS to PDF converter (version 2006.09.02).]
+\scratchcounter=\count284
+\scratchdimen=\dimen159
+\scratchbox=\box55
+\nofMPsegments=\count285
+\nofMParguments=\count286
+\everyMPshowfont=\toks22
+\MPscratchCnt=\count287
+\MPscratchDim=\dimen160
+\MPnumerator=\count288
+\makeMPintoPDFobject=\count289
+\everyMPtoPDFconversion=\toks23
+)
+(C:\Users\chris\AppData\Local\Programs\MiKTeX\tex/latex/epstopdf-pkg\epstopdf-b
+ase.sty
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
 Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
 85.
 
-(/Users/alexnewhouse/Library/TinyTeX/texmf-dist/tex/latex/latexconfig/epstopdf-
-sys.cfg
-File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
-e
+(C:\Users\chris\AppData\Local\Programs\MiKTeX\tex/latex/00miktex\epstopdf-sys.c
+fg
+File: epstopdf-sys.cfg 2021/03/18 v2.0 Configuration of epstopdf for MiKTeX
 ))
 Package hyperref Info: Link coloring ON on input line 24.
 
-(/Users/alexnewhouse/Library/TinyTeX/texmf-dist/tex/latex/hyperref/nameref.sty
+(C:\Users\chris\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\nameref.sty
 Package: nameref 2021-04-02 v2.47 Cross-referencing by name of section
 
-(/Users/alexnewhouse/Library/TinyTeX/texmf-dist/tex/latex/refcount/refcount.sty
+(C:\Users\chris\AppData\Local\Programs\MiKTeX\tex/latex/refcount\refcount.sty
 Package: refcount 2019/12/15 v3.6 Data extraction from label references (HO)
 )
-(/Users/alexnewhouse/Library/TinyTeX/texmf-dist/tex/generic/gettitlestring/gett
-itlestring.sty
+(C:\Users\chris\AppData\Local\Programs\MiKTeX\tex/generic/gettitlestring\gettit
+lestring.sty
 Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 )
-\c@section@level=\count284
+\c@section@level=\count290
 )
 LaTeX Info: Redefining \ref on input line 24.
 LaTeX Info: Redefining \pageref on input line 24.
 LaTeX Info: Redefining \nameref on input line 24.
-LaTeX Font Info:    Trying to load font information for U+msa on input line 47.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 48.
 
 
-(/Users/alexnewhouse/Library/TinyTeX/texmf-dist/tex/latex/amsfonts/umsa.fd
+(C:\Users\chris\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 47.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 48.
 
 
-(/Users/alexnewhouse/Library/TinyTeX/texmf-dist/tex/latex/amsfonts/umsb.fd
+(C:\Users\chris\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
 LaTeX Font Info:    Trying to load font information for OT1+pcr on input line 4
-7.
+8.
 
-(/Users/alexnewhouse/Library/TinyTeX/texmf-dist/tex/latex/psnfss/ot1pcr.fd
+(C:\Users\chris\AppData\Local\Programs\MiKTeX\tex/latex/psnfss\ot1pcr.fd
 File: ot1pcr.fd 2001/06/04 font definitions for OT1/pcr.
 )
-! Font OT1/pcr/m/n/12=pcrr7t at 12.0pt not loadable: Metric (TFM) file not foun
-d.
-<to be read again> 
-                   relax 
-l.47 
-     
-I wasn't able to read the size data for this font,
-so I will ignore the font specification.
-[Wizards can fix TFM files using TFtoPL/PLtoTF.]
-You might try inserting a different font spec;
-e.g., type `I\font<same font id>=<substitute font name>'.
 
-! Font OT1/pcr/m/n/9=pcrr7t at 9.0pt not loadable: Metric (TFM) file not found.
-<to be read again> 
-                   relax 
-l.47 
-     
-I wasn't able to read the size data for this font,
-so I will ignore the font specification.
-[Wizards can fix TFM files using TFtoPL/PLtoTF.]
-You might try inserting a different font spec;
-e.g., type `I\font<same font id>=<substitute font name>'.
+LaTeX Warning: Citation `linkpred2007' on page 1 undefined on input line 75.
 
-Missing character: There is no f in font nullfont!
-Missing character: There is no i in font nullfont!
-Missing character: There is no r in font nullfont!
-Missing character: There is no s in font nullfont!
-Missing character: There is no t in font nullfont!
-Missing character: There is no a in font nullfont!
-Missing character: There is no u in font nullfont!
-Missing character: There is no t in font nullfont!
-Missing character: There is no h in font nullfont!
-Missing character: There is no o in font nullfont!
-Missing character: There is no r in font nullfont!
-Missing character: There is no @ in font nullfont!
-Missing character: There is no i in font nullfont!
-Missing character: There is no 1 in font nullfont!
-Missing character: There is no . in font nullfont!
-Missing character: There is no o in font nullfont!
-Missing character: There is no r in font nullfont!
-Missing character: There is no g in font nullfont!
-Missing character: There is no s in font nullfont!
-Missing character: There is no e in font nullfont!
-Missing character: There is no c in font nullfont!
-Missing character: There is no o in font nullfont!
-Missing character: There is no n in font nullfont!
-Missing character: There is no d in font nullfont!
-Missing character: There is no a in font nullfont!
-Missing character: There is no u in font nullfont!
-Missing character: There is no t in font nullfont!
-Missing character: There is no h in font nullfont!
-Missing character: There is no o in font nullfont!
-Missing character: There is no r in font nullfont!
-Missing character: There is no @ in font nullfont!
-Missing character: There is no i in font nullfont!
-Missing character: There is no 2 in font nullfont!
-Missing character: There is no . in font nullfont!
-Missing character: There is no o in font nullfont!
-Missing character: There is no r in font nullfont!
-Missing character: There is no g in font nullfont!
 
-Underfull \hbox (badness 1052) in paragraph at lines 85--86
+LaTeX Warning: Citation `schlichtkrull2017modeling' on page 1 undefined on inpu
+t line 75.
+
+
+LaTeX Warning: Citation `Duvenaud' on page 1 undefined on input line 75.
+
+
+LaTeX Warning: Citation `SEAL' on page 1 undefined on input line 75.
+
+
+LaTeX Warning: Citation `graphattention' on page 1 undefined on input line 77.
+
+
+LaTeX Warning: Citation `izadi' on page 1 undefined on input line 77.
+
+
+LaTeX Warning: Citation `zhang' on page 1 undefined on input line 79.
+
+
+LaTeX Warning: Citation `zhang' on page 1 undefined on input line 79.
+
+[1{C:/Users/chris/AppData/Local/MiKTeX/pdftex/config/pdftex.map}
+
+
+]
+
+LaTeX Warning: Citation `SEAL' on page 2 undefined on input line 103.
+
+
+LaTeX Warning: Citation `pytorch-geometric' on page 2 undefined on input line 1
+05.
+
+[2]
+<multi-architecture-comparison.png, id=21, 578.16pt x 433.62pt>
+File: multi-architecture-comparison.png Graphic file (type png)
+<use multi-architecture-comparison.png>
+Package pdftex.def Info: multi-architecture-comparison.png  used on input line 
+123.
+(pdftex.def)             Requested size: 189.70947pt x 142.2812pt.
+
+Underfull \hbox (badness 1052) in paragraph at lines 137--138
 []\OT1/ptm/b/n/10 Important: This sec-tion should be rig-or-ous and
  []
 
 
-Underfull \hbox (badness 1331) in paragraph at lines 111--112
+Underfull \hbox (badness 1331) in paragraph at lines 163--164
 []\OT1/ptm/m/n/10 (5 points) Over-all clar-ity. Is the manuscript self-
  []
 
-[1{/Users/alexnewhouse/Library/TinyTeX/texmf-var/fonts/map/pdftex/updmap/pdftex
-.map}
 
+Underfull \vbox (badness 2762) has occurred while \output is active []
 
-]
-! Font OT1/pcr/m/n/10=pcrr7t at 10.0pt not loadable: Metric (TFM) file not foun
-d.
-<to be read again> 
-                   relax 
-l.181 the \verb
-               '\cvprfinalcopy' command in the document preamble.)  Reviewers:
-I wasn't able to read the size data for this font,
-so I will ignore the font specification.
-[Wizards can fix TFM files using TFtoPL/PLtoTF.]
-You might try inserting a different font spec;
-e.g., type `I\font<same font id>=<substitute font name>'.
-
-Missing character: There is no \ in font nullfont!
-Missing character: There is no c in font nullfont!
-Missing character: There is no v in font nullfont!
-Missing character: There is no p in font nullfont!
-Missing character: There is no r in font nullfont!
-Missing character: There is no f in font nullfont!
-Missing character: There is no i in font nullfont!
-Missing character: There is no n in font nullfont!
-Missing character: There is no a in font nullfont!
-Missing character: There is no l in font nullfont!
-Missing character: There is no c in font nullfont!
-Missing character: There is no o in font nullfont!
-Missing character: There is no p in font nullfont!
-Missing character: There is no y in font nullfont!
-[2]
-! \textfont 0 is undefined (character h).
-\Url@FormatString ...\Url@String \UrlRight \m@th $
-                                                  
-l.198 ...tp://www.pamitc.org/documents/mermin.pdf}
-                                                  .
-Somewhere in the math formula just ended, you used the
-stated character from an undefined font family. For example,
-plain TeX doesn't allow \it or \sl in subscripts. Proceed,
-and I'll try to forget that I needed that character.
-
-! \textfont 0 is undefined (character t).
-\Url@FormatString ...\Url@String \UrlRight \m@th $
-                                                  
-l.198 ...tp://www.pamitc.org/documents/mermin.pdf}
-                                                  .
-Somewhere in the math formula just ended, you used the
-stated character from an undefined font family. For example,
-plain TeX doesn't allow \it or \sl in subscripts. Proceed,
-and I'll try to forget that I needed that character.
-
-! \textfont 0 is undefined (character t).
-\Url@FormatString ...\Url@String \UrlRight \m@th $
-                                                  
-l.198 ...tp://www.pamitc.org/documents/mermin.pdf}
-                                                  .
-Somewhere in the math formula just ended, you used the
-stated character from an undefined font family. For example,
-plain TeX doesn't allow \it or \sl in subscripts. Proceed,
-and I'll try to forget that I needed that character.
-
-! \textfont 0 is undefined (character p).
-\Url@FormatString ...\Url@String \UrlRight \m@th $
-                                                  
-l.198 ...tp://www.pamitc.org/documents/mermin.pdf}
-                                                  .
-Somewhere in the math formula just ended, you used the
-stated character from an undefined font family. For example,
-plain TeX doesn't allow \it or \sl in subscripts. Proceed,
-and I'll try to forget that I needed that character.
-
-! \textfont 0 is undefined (character :).
-\Url@FormatString ...\Url@String \UrlRight \m@th $
-                                                  
-l.198 ...tp://www.pamitc.org/documents/mermin.pdf}
-                                                  .
-Somewhere in the math formula just ended, you used the
-stated character from an undefined font family. For example,
-plain TeX doesn't allow \it or \sl in subscripts. Proceed,
-and I'll try to forget that I needed that character.
-
-! \textfont 0 is undefined (character /).
-\Url@FormatString ...\Url@String \UrlRight \m@th $
-                                                  
-l.198 ...tp://www.pamitc.org/documents/mermin.pdf}
-                                                  .
-Somewhere in the math formula just ended, you used the
-stated character from an undefined font family. For example,
-plain TeX doesn't allow \it or \sl in subscripts. Proceed,
-and I'll try to forget that I needed that character.
-
-! \textfont 0 is undefined (character /).
-\Url@FormatString ...\Url@String \UrlRight \m@th $
-                                                  
-l.198 ...tp://www.pamitc.org/documents/mermin.pdf}
-                                                  .
-Somewhere in the math formula just ended, you used the
-stated character from an undefined font family. For example,
-plain TeX doesn't allow \it or \sl in subscripts. Proceed,
-and I'll try to forget that I needed that character.
-
-! \textfont 0 is undefined (character w).
-\Url@FormatString ...\Url@String \UrlRight \m@th $
-                                                  
-l.198 ...tp://www.pamitc.org/documents/mermin.pdf}
-                                                  .
-Somewhere in the math formula just ended, you used the
-stated character from an undefined font family. For example,
-plain TeX doesn't allow \it or \sl in subscripts. Proceed,
-and I'll try to forget that I needed that character.
-
-! \textfont 0 is undefined (character w).
-\Url@FormatString ...\Url@String \UrlRight \m@th $
-                                                  
-l.198 ...tp://www.pamitc.org/documents/mermin.pdf}
-                                                  .
-Somewhere in the math formula just ended, you used the
-stated character from an undefined font family. For example,
-plain TeX doesn't allow \it or \sl in subscripts. Proceed,
-and I'll try to forget that I needed that character.
-
-! \textfont 0 is undefined (character w).
-\Url@FormatString ...\Url@String \UrlRight \m@th $
-                                                  
-l.198 ...tp://www.pamitc.org/documents/mermin.pdf}
-                                                  .
-Somewhere in the math formula just ended, you used the
-stated character from an undefined font family. For example,
-plain TeX doesn't allow \it or \sl in subscripts. Proceed,
-and I'll try to forget that I needed that character.
-
-! \textfont 0 is undefined (character .).
-\Url@FormatString ...\Url@String \UrlRight \m@th $
-                                                  
-l.198 ...tp://www.pamitc.org/documents/mermin.pdf}
-                                                  .
-Somewhere in the math formula just ended, you used the
-stated character from an undefined font family. For example,
-plain TeX doesn't allow \it or \sl in subscripts. Proceed,
-and I'll try to forget that I needed that character.
-
-! \textfont 0 is undefined (character p).
-\Url@FormatString ...\Url@String \UrlRight \m@th $
-                                                  
-l.198 ...tp://www.pamitc.org/documents/mermin.pdf}
-                                                  .
-Somewhere in the math formula just ended, you used the
-stated character from an undefined font family. For example,
-plain TeX doesn't allow \it or \sl in subscripts. Proceed,
-and I'll try to forget that I needed that character.
-
-! \textfont 0 is undefined (character a).
-\Url@FormatString ...\Url@String \UrlRight \m@th $
-                                                  
-l.198 ...tp://www.pamitc.org/documents/mermin.pdf}
-                                                  .
-Somewhere in the math formula just ended, you used the
-stated character from an undefined font family. For example,
-plain TeX doesn't allow \it or \sl in subscripts. Proceed,
-and I'll try to forget that I needed that character.
-
-! \textfont 0 is undefined (character m).
-\Url@FormatString ...\Url@String \UrlRight \m@th $
-                                                  
-l.198 ...tp://www.pamitc.org/documents/mermin.pdf}
-                                                  .
-Somewhere in the math formula just ended, you used the
-stated character from an undefined font family. For example,
-plain TeX doesn't allow \it or \sl in subscripts. Proceed,
-and I'll try to forget that I needed that character.
-
-! \textfont 0 is undefined (character i).
-\Url@FormatString ...\Url@String \UrlRight \m@th $
-                                                  
-l.198 ...tp://www.pamitc.org/documents/mermin.pdf}
-                                                  .
-Somewhere in the math formula just ended, you used the
-stated character from an undefined font family. For example,
-plain TeX doesn't allow \it or \sl in subscripts. Proceed,
-and I'll try to forget that I needed that character.
-
-! \textfont 0 is undefined (character t).
-\Url@FormatString ...\Url@String \UrlRight \m@th $
-                                                  
-l.198 ...tp://www.pamitc.org/documents/mermin.pdf}
-                                                  .
-Somewhere in the math formula just ended, you used the
-stated character from an undefined font family. For example,
-plain TeX doesn't allow \it or \sl in subscripts. Proceed,
-and I'll try to forget that I needed that character.
-
-! \textfont 0 is undefined (character c).
-\Url@FormatString ...\Url@String \UrlRight \m@th $
-                                                  
-l.198 ...tp://www.pamitc.org/documents/mermin.pdf}
-                                                  .
-Somewhere in the math formula just ended, you used the
-stated character from an undefined font family. For example,
-plain TeX doesn't allow \it or \sl in subscripts. Proceed,
-and I'll try to forget that I needed that character.
-
-! \textfont 0 is undefined (character .).
-\Url@FormatString ...\Url@String \UrlRight \m@th $
-                                                  
-l.198 ...tp://www.pamitc.org/documents/mermin.pdf}
-                                                  .
-Somewhere in the math formula just ended, you used the
-stated character from an undefined font family. For example,
-plain TeX doesn't allow \it or \sl in subscripts. Proceed,
-and I'll try to forget that I needed that character.
-
-! \textfont 0 is undefined (character o).
-\Url@FormatString ...\Url@String \UrlRight \m@th $
-                                                  
-l.198 ...tp://www.pamitc.org/documents/mermin.pdf}
-                                                  .
-Somewhere in the math formula just ended, you used the
-stated character from an undefined font family. For example,
-plain TeX doesn't allow \it or \sl in subscripts. Proceed,
-and I'll try to forget that I needed that character.
-
-! \textfont 0 is undefined (character r).
-\Url@FormatString ...\Url@String \UrlRight \m@th $
-                                                  
-l.198 ...tp://www.pamitc.org/documents/mermin.pdf}
-                                                  .
-Somewhere in the math formula just ended, you used the
-stated character from an undefined font family. For example,
-plain TeX doesn't allow \it or \sl in subscripts. Proceed,
-and I'll try to forget that I needed that character.
-
-! \textfont 0 is undefined (character g).
-\Url@FormatString ...\Url@String \UrlRight \m@th $
-                                                  
-l.198 ...tp://www.pamitc.org/documents/mermin.pdf}
-                                                  .
-Somewhere in the math formula just ended, you used the
-stated character from an undefined font family. For example,
-plain TeX doesn't allow \it or \sl in subscripts. Proceed,
-and I'll try to forget that I needed that character.
-
-! \textfont 0 is undefined (character /).
-\Url@FormatString ...\Url@String \UrlRight \m@th $
-                                                  
-l.198 ...tp://www.pamitc.org/documents/mermin.pdf}
-                                                  .
-Somewhere in the math formula just ended, you used the
-stated character from an undefined font family. For example,
-plain TeX doesn't allow \it or \sl in subscripts. Proceed,
-and I'll try to forget that I needed that character.
-
-! \textfont 0 is undefined (character d).
-\Url@FormatString ...\Url@String \UrlRight \m@th $
-                                                  
-l.198 ...tp://www.pamitc.org/documents/mermin.pdf}
-                                                  .
-Somewhere in the math formula just ended, you used the
-stated character from an undefined font family. For example,
-plain TeX doesn't allow \it or \sl in subscripts. Proceed,
-and I'll try to forget that I needed that character.
-
-! \textfont 0 is undefined (character o).
-\Url@FormatString ...\Url@String \UrlRight \m@th $
-                                                  
-l.198 ...tp://www.pamitc.org/documents/mermin.pdf}
-                                                  .
-Somewhere in the math formula just ended, you used the
-stated character from an undefined font family. For example,
-plain TeX doesn't allow \it or \sl in subscripts. Proceed,
-and I'll try to forget that I needed that character.
-
-! \textfont 0 is undefined (character c).
-\Url@FormatString ...\Url@String \UrlRight \m@th $
-                                                  
-l.198 ...tp://www.pamitc.org/documents/mermin.pdf}
-                                                  .
-Somewhere in the math formula just ended, you used the
-stated character from an undefined font family. For example,
-plain TeX doesn't allow \it or \sl in subscripts. Proceed,
-and I'll try to forget that I needed that character.
-
-! \textfont 0 is undefined (character u).
-\Url@FormatString ...\Url@String \UrlRight \m@th $
-                                                  
-l.198 ...tp://www.pamitc.org/documents/mermin.pdf}
-                                                  .
-Somewhere in the math formula just ended, you used the
-stated character from an undefined font family. For example,
-plain TeX doesn't allow \it or \sl in subscripts. Proceed,
-and I'll try to forget that I needed that character.
-
-! \textfont 0 is undefined (character m).
-\Url@FormatString ...\Url@String \UrlRight \m@th $
-                                                  
-l.198 ...tp://www.pamitc.org/documents/mermin.pdf}
-                                                  .
-Somewhere in the math formula just ended, you used the
-stated character from an undefined font family. For example,
-plain TeX doesn't allow \it or \sl in subscripts. Proceed,
-and I'll try to forget that I needed that character.
-
-! \textfont 0 is undefined (character e).
-\Url@FormatString ...\Url@String \UrlRight \m@th $
-                                                  
-l.198 ...tp://www.pamitc.org/documents/mermin.pdf}
-                                                  .
-Somewhere in the math formula just ended, you used the
-stated character from an undefined font family. For example,
-plain TeX doesn't allow \it or \sl in subscripts. Proceed,
-and I'll try to forget that I needed that character.
-
-! \textfont 0 is undefined (character n).
-\Url@FormatString ...\Url@String \UrlRight \m@th $
-                                                  
-l.198 ...tp://www.pamitc.org/documents/mermin.pdf}
-                                                  .
-Somewhere in the math formula just ended, you used the
-stated character from an undefined font family. For example,
-plain TeX doesn't allow \it or \sl in subscripts. Proceed,
-and I'll try to forget that I needed that character.
-
-! \textfont 0 is undefined (character t).
-\Url@FormatString ...\Url@String \UrlRight \m@th $
-                                                  
-l.198 ...tp://www.pamitc.org/documents/mermin.pdf}
-                                                  .
-Somewhere in the math formula just ended, you used the
-stated character from an undefined font family. For example,
-plain TeX doesn't allow \it or \sl in subscripts. Proceed,
-and I'll try to forget that I needed that character.
-
-! \textfont 0 is undefined (character s).
-\Url@FormatString ...\Url@String \UrlRight \m@th $
-                                                  
-l.198 ...tp://www.pamitc.org/documents/mermin.pdf}
-                                                  .
-Somewhere in the math formula just ended, you used the
-stated character from an undefined font family. For example,
-plain TeX doesn't allow \it or \sl in subscripts. Proceed,
-and I'll try to forget that I needed that character.
-
-! \textfont 0 is undefined (character /).
-\Url@FormatString ...\Url@String \UrlRight \m@th $
-                                                  
-l.198 ...tp://www.pamitc.org/documents/mermin.pdf}
-                                                  .
-Somewhere in the math formula just ended, you used the
-stated character from an undefined font family. For example,
-plain TeX doesn't allow \it or \sl in subscripts. Proceed,
-and I'll try to forget that I needed that character.
-
-! \textfont 0 is undefined (character m).
-\Url@FormatString ...\Url@String \UrlRight \m@th $
-                                                  
-l.198 ...tp://www.pamitc.org/documents/mermin.pdf}
-                                                  .
-Somewhere in the math formula just ended, you used the
-stated character from an undefined font family. For example,
-plain TeX doesn't allow \it or \sl in subscripts. Proceed,
-and I'll try to forget that I needed that character.
-
-! \textfont 0 is undefined (character e).
-\Url@FormatString ...\Url@String \UrlRight \m@th $
-                                                  
-l.198 ...tp://www.pamitc.org/documents/mermin.pdf}
-                                                  .
-Somewhere in the math formula just ended, you used the
-stated character from an undefined font family. For example,
-plain TeX doesn't allow \it or \sl in subscripts. Proceed,
-and I'll try to forget that I needed that character.
-
-! \textfont 0 is undefined (character r).
-\Url@FormatString ...\Url@String \UrlRight \m@th $
-                                                  
-l.198 ...tp://www.pamitc.org/documents/mermin.pdf}
-                                                  .
-Somewhere in the math formula just ended, you used the
-stated character from an undefined font family. For example,
-plain TeX doesn't allow \it or \sl in subscripts. Proceed,
-and I'll try to forget that I needed that character.
-
-! \textfont 0 is undefined (character m).
-\Url@FormatString ...\Url@String \UrlRight \m@th $
-                                                  
-l.198 ...tp://www.pamitc.org/documents/mermin.pdf}
-                                                  .
-Somewhere in the math formula just ended, you used the
-stated character from an undefined font family. For example,
-plain TeX doesn't allow \it or \sl in subscripts. Proceed,
-and I'll try to forget that I needed that character.
-
-! \textfont 0 is undefined (character i).
-\Url@FormatString ...\Url@String \UrlRight \m@th $
-                                                  
-l.198 ...tp://www.pamitc.org/documents/mermin.pdf}
-                                                  .
-Somewhere in the math formula just ended, you used the
-stated character from an undefined font family. For example,
-plain TeX doesn't allow \it or \sl in subscripts. Proceed,
-and I'll try to forget that I needed that character.
-
-! \textfont 0 is undefined (character n).
-\Url@FormatString ...\Url@String \UrlRight \m@th $
-                                                  
-l.198 ...tp://www.pamitc.org/documents/mermin.pdf}
-                                                  .
-Somewhere in the math formula just ended, you used the
-stated character from an undefined font family. For example,
-plain TeX doesn't allow \it or \sl in subscripts. Proceed,
-and I'll try to forget that I needed that character.
-
-! \textfont 0 is undefined (character .).
-\Url@FormatString ...\Url@String \UrlRight \m@th $
-                                                  
-l.198 ...tp://www.pamitc.org/documents/mermin.pdf}
-                                                  .
-Somewhere in the math formula just ended, you used the
-stated character from an undefined font family. For example,
-plain TeX doesn't allow \it or \sl in subscripts. Proceed,
-and I'll try to forget that I needed that character.
-
-! \textfont 0 is undefined (character p).
-\Url@FormatString ...\Url@String \UrlRight \m@th $
-                                                  
-l.198 ...tp://www.pamitc.org/documents/mermin.pdf}
-                                                  .
-Somewhere in the math formula just ended, you used the
-stated character from an undefined font family. For example,
-plain TeX doesn't allow \it or \sl in subscripts. Proceed,
-and I'll try to forget that I needed that character.
-
-! \textfont 0 is undefined (character d).
-\Url@FormatString ...\Url@String \UrlRight \m@th $
-                                                  
-l.198 ...tp://www.pamitc.org/documents/mermin.pdf}
-                                                  .
-Somewhere in the math formula just ended, you used the
-stated character from an undefined font family. For example,
-plain TeX doesn't allow \it or \sl in subscripts. Proceed,
-and I'll try to forget that I needed that character.
-
-! \textfont 0 is undefined (character f).
-\Url@FormatString ...\Url@String \UrlRight \m@th $
-                                                  
-l.198 ...tp://www.pamitc.org/documents/mermin.pdf}
-                                                  .
-Somewhere in the math formula just ended, you used the
-stated character from an undefined font family. For example,
-plain TeX doesn't allow \it or \sl in subscripts. Proceed,
-and I'll try to forget that I needed that character.
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 244--250
+ [3 <./multi-architecture-comparison.png>] [4]
+Underfull \hbox (badness 10000) in paragraph at lines 296--302
 
  []
 
-Missing character: There is no $ in font nullfont!
-Missing character: There is no c in font nullfont!
-Missing character: There is no o in font nullfont!
-Missing character: There is no n in font nullfont!
-Missing character: There is no f in font nullfont!
-Missing character: There is no _ in font nullfont!
-Missing character: There is no a in font nullfont!
-Missing character: There is no $ in font nullfont!
-Missing character: There is no $ in font nullfont!
-Missing character: There is no \ in font nullfont!
-Missing character: There is no m in font nullfont!
-Missing character: There is no a in font nullfont!
-Missing character: There is no t in font nullfont!
-Missing character: There is no h in font nullfont!
-Missing character: There is no i in font nullfont!
-Missing character: There is no t in font nullfont!
-Missing character: There is no { in font nullfont!
-Missing character: There is no c in font nullfont!
-Missing character: There is no o in font nullfont!
-Missing character: There is no n in font nullfont!
-Missing character: There is no f in font nullfont!
-Missing character: There is no } in font nullfont!
-Missing character: There is no _ in font nullfont!
-Missing character: There is no a in font nullfont!
-Missing character: There is no $ in font nullfont!
-Missing character: There is no \ in font nullfont!
-Missing character: There is no e in font nullfont!
-Missing character: There is no g in font nullfont!
-[3]
-Missing character: There is no \ in font nullfont!
-Missing character: There is no e in font nullfont!
-Missing character: There is no t in font nullfont!
-Missing character: There is no a in font nullfont!
-Missing character: There is no l in font nullfont!
-Missing character: There is no \ in font nullfont!
-Missing character: There is no i in font nullfont!
-Missing character: There is no n in font nullfont!
-Missing character: There is no c in font nullfont!
-Missing character: There is no l in font nullfont!
-Missing character: There is no u in font nullfont!
-Missing character: There is no d in font nullfont!
-Missing character: There is no e in font nullfont!
-Missing character: There is no g in font nullfont!
-Missing character: There is no r in font nullfont!
-Missing character: There is no a in font nullfont!
-Missing character: There is no p in font nullfont!
-Missing character: There is no h in font nullfont!
-Missing character: There is no i in font nullfont!
-Missing character: There is no c in font nullfont!
-Missing character: There is no s in font nullfont!
- [4]
-Missing character: There is no \ in font nullfont!
-Missing character: There is no u in font nullfont!
-Missing character: There is no s in font nullfont!
-Missing character: There is no e in font nullfont!
-Missing character: There is no p in font nullfont!
-Missing character: There is no a in font nullfont!
-Missing character: There is no c in font nullfont!
-Missing character: There is no k in font nullfont!
-Missing character: There is no a in font nullfont!
-Missing character: There is no g in font nullfont!
-Missing character: There is no e in font nullfont!
-Missing character: There is no [ in font nullfont!
-Missing character: There is no d in font nullfont!
-Missing character: There is no v in font nullfont!
-Missing character: There is no i in font nullfont!
-Missing character: There is no p in font nullfont!
-Missing character: There is no s in font nullfont!
-Missing character: There is no ] in font nullfont!
-Missing character: There is no { in font nullfont!
-Missing character: There is no g in font nullfont!
-Missing character: There is no r in font nullfont!
-Missing character: There is no a in font nullfont!
-Missing character: There is no p in font nullfont!
-Missing character: There is no h in font nullfont!
-Missing character: There is no i in font nullfont!
-Missing character: There is no c in font nullfont!
-Missing character: There is no x in font nullfont!
-Missing character: There is no } in font nullfont!
-Missing character: There is no . in font nullfont!
-Missing character: There is no . in font nullfont!
-Missing character: There is no . in font nullfont!
-Missing character: There is no \ in font nullfont!
-Missing character: There is no i in font nullfont!
-Missing character: There is no n in font nullfont!
-Missing character: There is no c in font nullfont!
-Missing character: There is no l in font nullfont!
-Missing character: There is no u in font nullfont!
-Missing character: There is no d in font nullfont!
-Missing character: There is no e in font nullfont!
-Missing character: There is no g in font nullfont!
-Missing character: There is no r in font nullfont!
-Missing character: There is no a in font nullfont!
-Missing character: There is no p in font nullfont!
-Missing character: There is no h in font nullfont!
-Missing character: There is no i in font nullfont!
-Missing character: There is no c in font nullfont!
-Missing character: There is no s in font nullfont!
-Missing character: There is no [ in font nullfont!
-Missing character: There is no w in font nullfont!
-Missing character: There is no i in font nullfont!
-Missing character: There is no d in font nullfont!
-Missing character: There is no t in font nullfont!
-Missing character: There is no h in font nullfont!
-Missing character: There is no = in font nullfont!
-Missing character: There is no 0 in font nullfont!
-Missing character: There is no . in font nullfont!
-Missing character: There is no 8 in font nullfont!
-Missing character: There is no \ in font nullfont!
-Missing character: There is no l in font nullfont!
-Missing character: There is no i in font nullfont!
-Missing character: There is no n in font nullfont!
-Missing character: There is no e in font nullfont!
-Missing character: There is no w in font nullfont!
-Missing character: There is no i in font nullfont!
-Missing character: There is no d in font nullfont!
-Missing character: There is no t in font nullfont!
-Missing character: There is no h in font nullfont!
-Missing character: There is no ] in font nullfont!
-Missing character: There is no { in font nullfont!
-Missing character: There is no m in font nullfont!
-Missing character: There is no y in font nullfont!
-Missing character: There is no f in font nullfont!
-Missing character: There is no i in font nullfont!
-Missing character: There is no l in font nullfont!
-Missing character: There is no e in font nullfont!
-Missing character: There is no . in font nullfont!
-Missing character: There is no e in font nullfont!
-Missing character: There is no p in font nullfont!
-Missing character: There is no s in font nullfont!
-Missing character: There is no } in font nullfont!
- (./egpaper_for_review.bbl (./egpaper_for_review.brf)
+[5] [6] (egpaper_for_review.bbl (egpaper_for_review.brf)
 \tf@brf=\write3
 \openout3 = `egpaper_for_review.brf'.
 
 
-Underfull \hbox (badness 2376) in paragraph at lines 12--12
-[]\OT1/ptm/m/n/9 FirstName Alpher and First-Name Fotheringham-Smythe.
+Underfull \hbox (badness 2990) in paragraph at lines 20--20
+\OT1/ptm/m/n/9 link pre-dic-tion.  [][]$\OT1/pcr/m/n/9 https : / / github . com
+ / rusty1s /
  []
 
 
-Underfull \hbox (badness 1132) in paragraph at lines 17--17
-[]\OT1/ptm/m/n/9 FirstName Alpher, First-Name Fotheringham-Smythe, and
+Underfull \hbox (badness 10000) in paragraph at lines 20--20
+\OT1/pcr/m/n/9 pytorch _ geometric / blob / master / examples /
  []
 
-Missing character: There is no f in font nullfont!
-Missing character: There is no g in font nullfont!
-Missing character: There is no 3 in font nullfont!
-Missing character: There is no 2 in font nullfont!
-Missing character: There is no 4 in font nullfont!
-Missing character: There is no . in font nullfont!
-Missing character: There is no p in font nullfont!
-Missing character: There is no d in font nullfont!
-Missing character: There is no f in font nullfont!
-Missing character: There is no t in font nullfont!
-Missing character: There is no r in font nullfont!
-Missing character: There is no . in font nullfont!
-Missing character: There is no p in font nullfont!
-Missing character: There is no d in font nullfont!
-Missing character: There is no f in font nullfont!
-) [5
 
-] (./egpaper_for_review.aux)
+Underfull \hbox (badness 1616) in paragraph at lines 25--25
+[]\OT1/ptm/m/n/9 Weiwei Gu, Fei Gao, Xi-ao-dan Lou, and Jiang Zhang.
+ []
+
+
+Underfull \hbox (badness 3229) in paragraph at lines 25--25
+\OT1/ptm/m/n/9 Link pre-dic-tion via graph at-ten-tion net-work.  \OT1/ptm/m/it
+/9 CoRR\OT1/ptm/m/n/9 ,
+ []
+
+
+Underfull \hbox (badness 1137) in paragraph at lines 47--47
+\OT1/ptm/m/n/9 graph neu-ral net-works.  In S. Ben-gio, H. Wal-lach, H.
+ []
+
+) [7] (egpaper_for_review.aux)
+
+LaTeX Warning: There were undefined references.
+
+
+LaTeX Warning: There were multiply-defined labels.
+
 Package rerunfilecheck Info: File `egpaper_for_review.brf' has not changed.
-(rerunfilecheck)             Checksum: 39D0B2E191A6D35F7908EBB3B7F5A40E;466.
+(rerunfilecheck)             Checksum: 4C0196530741C5614A977D03531E4683;885.
  ) 
 Here is how much of TeX's memory you used:
- 9270 strings out of 480445
- 137168 string characters out of 5896383
- 451216 words of memory out of 5000000
- 26806 multiletter control sequences out of 15000+600000
- 433632 words of font info for 90 fonts, out of 8000000 for 9000
- 14 hyphenation exceptions out of 8191
- 87i,10n,94p,503b,379s stack positions out of 5000i,500n,10000p,200000b,80000s
-{/Users/alexnewhouse/Library/TinyTeX/texmf-dist/fonts/enc/dvips/base/8r.enc}<
-/Users/alexnewhouse/Library/TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/c
-mmi10.pfb></Users/alexnewhouse/Library/TinyTeX/texmf-dist/fonts/type1/public/am
-sfonts/cm/cmmi7.pfb></Users/alexnewhouse/Library/TinyTeX/texmf-dist/fonts/type1
-/public/amsfonts/cm/cmmi9.pfb></Users/alexnewhouse/Library/TinyTeX/texmf-dist/f
-onts/type1/public/amsfonts/cm/cmr10.pfb></Users/alexnewhouse/Library/TinyTeX/te
-xmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></Users/alexnewhouse/Library/T
-inyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></Users/alexnewhouse/
-Library/TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></Users/al
-exnewhouse/Library/TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb
-></Users/alexnewhouse/Library/TinyTeX/texmf-dist/fonts/type1/urw/times/utmb8a.p
-fb></Users/alexnewhouse/Library/TinyTeX/texmf-dist/fonts/type1/urw/times/utmr8a
-.pfb></Users/alexnewhouse/Library/TinyTeX/texmf-dist/fonts/type1/urw/times/utmr
-i8a.pfb>
-Output written on egpaper_for_review.pdf (5 pages, 141494 bytes).
+ 9621 strings out of 478870
+ 142148 string characters out of 2848837
+ 457656 words of memory out of 3000000
+ 27317 multiletter control sequences out of 15000+600000
+ 435223 words of font info for 96 fonts, out of 8000000 for 9000
+ 1141 hyphenation exceptions out of 8191
+ 87i,10n,94p,1035b,399s stack positions out of 5000i,500n,10000p,200000b,80000s
+pdfTeX warning (dest): name{cite.Authors14} has been referenced but does not 
+exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{cite.Alpher04} has been referenced but does not exi
+st, replaced by a fixed one
+
+pdfTeX warning (dest): name{cite.Alpher03} has been referenced but does not exi
+st, replaced by a fixed one
+
+pdfTeX warning (dest): name{cite.Alpher02} has been referenced but does not exi
+st, replaced by a fixed one
+
+pdfTeX warning (dest): name{cite.Authors14b} has been referenced but does not e
+xist, replaced by a fixed one
+
+{C:/Users/chris/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/base/8r.enc}<C:/U
+sers/chris/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.
+pfb><C:/Users/chris/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/c
+m/cmmi7.pfb><C:/Users/chris/AppData/Local/Programs/MiKTeX/fonts/type1/public/am
+sfonts/cm/cmmi9.pfb><C:/Users/chris/AppData/Local/Programs/MiKTeX/fonts/type1/p
+ublic/amsfonts/cm/cmr10.pfb><C:/Users/chris/AppData/Local/Programs/MiKTeX/fonts
+/type1/public/amsfonts/cm/cmr7.pfb><C:/Users/chris/AppData/Local/Programs/MiKTe
+X/fonts/type1/public/amsfonts/cm/cmr9.pfb><C:/Users/chris/AppData/Local/Program
+s/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/chris/AppData/Loca
+l/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmti10.pfb><C:/Users/chris/App
+Data/Local/Programs/MiKTeX/fonts/type1/urw/courier/ucrr8a.pfb><C:/Users/chris/A
+ppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmb8a.pfb><C:/Users/chris/A
+ppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmr8a.pfb><C:/Users/chris/A
+ppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmri8a.pfb>
+Output written on egpaper_for_review.pdf (7 pages, 2059528 bytes).
 PDF statistics:
- 146 PDF objects out of 1000 (max. 8388607)
- 115 compressed objects within 2 object streams
- 36 named destinations out of 1000 (max. 500000)
- 1 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 187 PDF objects out of 1000 (max. 8388607)
+ 51 named destinations out of 1000 (max. 500000)
+ 6 words of extra memory for PDF output out of 10000 (max. 10000000)
 
