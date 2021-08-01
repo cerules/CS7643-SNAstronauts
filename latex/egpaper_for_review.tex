@@ -24,22 +24,23 @@
 \begin{document}
 
 %%%%%%%%% TITLE
-\title{Project Report : CS 7643}
+\title{Predicting Edges in the Iron March Dataset Using Graph Neural Networks}
+\subtitle{Project Report : CS 7643}
 
-\author{First Author\\
-Institution1\\
-Institution1 address\\
-{\tt\small firstauthor@i1.org}
+\author{Alex Newhouse\\
+Georgia Institute of Technology\\
+{\tt\small alex.newhouse@gatech.edu}
 % For a paper whose authors are all at the same institution,
 % omit the following lines up until the closing ``}''.
 % Additional authors and addresses can be added with ``\and'',
 % just like the second author.
 % To save space, use either the email address or home page, not both
 \and
-Second Author\\
-Institution2\\
-First line of institution2 address\\
-{\tt\small secondauthor@i2.org}
+Christopher Roth\\
+{\tt\small croth37@gatech.edu}
+\and
+David Wu\\
+{\tt\small dpwu@gatech.edu}
 }
 
 \maketitle
@@ -88,13 +89,22 @@ In addition, we use Iron March's direct message data in order to further explore
 The full Iron March dataset contains sensitive data, including political beliefs, ages, names, locations, email addresses, and other social account data. The data was leaked without consent of the data subjects, further adding to its sensitivity. However, the dataset has been extensively published and covered in both reputable news sources and academic writing, and it has been used in government documents for the purpose of justifying indictments. Many of its subjects have been widely identified in the media. 
 
 We carefully use this data by not including personal information (beyond that which may incidentally arise in forum or message posts) in training the models. In addition, we do not identify any subject in subsequent analysis who has not already been identified in the public record, either through arrest warrants or coverage in reputable sources.
+
 %-------------------------------------------------------------------------
 %------------------------------------------------------------------------
 \section{Approach}
 
-(10 points) What did you do exactly? How did you solve the problem? Why did you think it would be successful? Is anything new in your approach? 
+We applied findings from recent edge prediction studies to the novel problem of predicting Iron March edges. Specifically, we explored the effectiveness of graph convolutional neural networks. Although developed primarily for use in analysis of knowledge and citation graphs, we hypothesized that social networks should share a similar enough structure to work effectively in a GNN. 
 
-(5 points) What problems did you anticipate? What problems did you encounter? Did the very first thing you tried work? 
+Iron March data does not contain an intrinsic individual-to-individual relationship. There are not friends lists as there are on e.g. Facebook, nor follower/followee relationships as there are on e.g. Twitter. Rather, all relationships are latent within interactions on the forums or in direct messages. As such, we construct an individual-to-individual edgelist via first building a two-mode or bipartite network between individuals and forum threads. From there, we extract individual-to-individual connections if two users post in the same forum thread.
+
+Since this heuristic for generating relationships generally exaggerates the connections--two individuals who happen to post on the same forum thread only once likely are not close friends--we also implement a threshold for inclusion in our edgelist. In this case, we implement a threshold of three: an edge is created between two individuals if they post on three of the same forum threads.
+
+This edgelist is used for training a GNN. Leveraging Pytorch Geometric's built-in dataset splitting functionality, we create an 85\%, 10\%, 5\% split for train, validation, and test data, respectively. We implement the training functionality detailed in Zhang and Chen~\cite{SEAL}, wherein a number of unconnected node-pairs are selected to create a "negative" edgelist, and concatenated onto the "positive" edgelist. The model can then treat these as the negative and positive labels for the prediction task. 
+
+The implementation of this GNN relies on the code in Pytorch Geometric's link prediction example, from Fey and Kim~\cite{pytorch-geometric}. We customized this code with the functionality necessary to process the Iron March data, generate bag-of-words features based on the text posts, and pass it through the GNN. As part of experimentation, we significantly varied the architecture of the model, ultimately selecting a much deeper and larger model than was used in the original repository. The metrics were modified to output accuracy in addition to AUC and loss, and we included code to generate loss and accuracy curves. Finally, we added functionality to run inference on the entire network after training, so that we can compare the existing network to the predicted network.
+
+ 
 
 \textbf{Important: Mention any code repositories (with citations) or other sources that you used, and specifically what changes you made to them for your project. }
 
