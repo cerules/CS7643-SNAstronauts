@@ -104,7 +104,7 @@ This edgelist is used for training a GNN. Leveraging Pytorch Geometric's built-i
 
 The implementation of this GNN relies on the code in Pytorch Geometric's link prediction example, from Fey and Kim~\cite{pytorch-geometric}. We customized this code with the functionality necessary to process the Iron March data, generate bag-of-words features based on the text posts, and pass it through the GNN. As part of experimentation, we significantly varied the architecture of the model, ultimately selecting a much deeper and larger model than was used in the original repository. The metrics were modified to output accuracy in addition to AUC and loss, and we included code to generate loss and accuracy curves. Finally, we added functionality to run inference on the entire network after training, so that we can compare the existing network to the predicted network.
 
- 
+\subsection{Bag of Words and Other Node Features}
 
 \textbf{Important: Mention any code repositories (with citations) or other sources that you used, and specifically what changes you made to them for your project. }
 
