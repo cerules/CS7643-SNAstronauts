@@ -8,9 +8,10 @@ import copy
 from tqdm import tqdm
 
 class Trainer():
-    def __init__(self, model, optimizer, device, name, load_state_path=None):
+    def __init__(self, model, optimizer, scheduler, device, name, load_state_path=None):
         self.model = model
         self.optimizer = optimizer
+        self.scheduler = scheduler
         self.device = device
         self.name = name
         self.basePath = f"./output/{name}"
@@ -21,7 +22,9 @@ class Trainer():
             self.model.load_state_dict(torch.load(load_state_path))
 
     def train(self, data, epochs=101):
-        self.best_val_auc = self.test_auc = 0
+        self.best_val_acc = 0
+        self.best_test_acc = 0
+
         self.train_losses = []
         self.train_accs = []
         self.valid_losses = []
@@ -37,10 +40,10 @@ class Trainer():
         pbar = tqdm(total=epochs)
         for epoch in range(1, epochs):
             loss, train_auc, train_acc = train_epoch(self.model, self.optimizer, self.device, data)
-            val_loss, val_auc, val_acc, test_loss, tmp_test_auc, test_acc = test(self.model, self.device, data)
-            if val_auc > self.best_val_auc:
-                self.best_val_auc = val_auc
-                self.test_auc = tmp_test_auc
+            val_loss, val_auc, val_acc, test_loss, test_auc, test_acc = test(self.model, self.device, data)
+            if val_acc > self.best_val_acc:
+                self.best_val_acc = val_acc
+                self.best_test_acc = test_acc
                 # save state of best model
                 best_model_state = copy.deepcopy(self.model.state_dict())
 
@@ -51,8 +54,10 @@ class Trainer():
             self.valid_aucs.append(val_auc)
             self.valid_accs.append(val_acc)
             self.test_losses.append(test_loss.item())
-            self.test_aucs.append(tmp_test_auc)
+            self.test_aucs.append(test_auc)
             self.test_accs.append(test_acc)
+
+            self.scheduler.step(val_loss)
 
             pbar.set_description(f'Epoch: {epoch:03d}, Loss: {loss:.4f}, Train: {train_acc:.4f}, Val: {val_acc:.4f}, '
                 f'Test: {test_acc:.4f}')
@@ -70,7 +75,7 @@ class Trainer():
                                 self.valid_losses, self.valid_aucs, self.valid_accs,
                                 self.test_losses, self.test_aucs, self.test_accs)
 
-        print(f"best val auc: {self.best_val_auc}, test auc: {self.test_auc}")
+        print(f"best val acc: {self.best_val_acc}, test acc: {self.best_test_acc}")
 
     def plotLearningCurves(self):
         self.plotLearningCurve("loss", self.train_losses, self.valid_losses, self.test_losses)

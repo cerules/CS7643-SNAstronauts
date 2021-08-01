@@ -3,6 +3,8 @@ import numpy as np
 import torch
 from torch_geometric.data import Data
 from tqdm import tqdm
+from sklearn import preprocessing
+from sklearn.decomposition import PCA
 
 from bag_of_words import get_bag_of_words
 
@@ -65,6 +67,9 @@ def get_ironmarch_network_data(
                 if author != co_author and links[author][co_author] > threshold:
                     edge_index.append([ids.index(author), ids.index(co_author)])
 
+        # for e in tqdm(edge_index, desc="validate edges"):
+        #     assert(list(reversed(e)) in edge_index)
+
         edge_index = torch.tensor(edge_index, dtype=torch.long)
         edge_index = edge_index.t().contiguous() # this is what pytorch geometric wants
 
@@ -74,14 +79,26 @@ def get_ironmarch_network_data(
             assert(len(authors) == len(post_authors))
 
             vocab_size = len(vocab)
-            x = torch.zeros((len(authors), vocab_size))
+            x = torch.zeros((len(authors), bow.shape[1]))
             for idx, author in enumerate(post_authors):
                 x[ids.index(author)] = torch.tensor(bow[idx])
+
+            # x = np.array(x)
+            # scaler = preprocessing.StandardScaler().fit(x)
+
+            # x = scaler.transform(x)
+
+            # pca = PCA(n_components = 1000)
+            # pca.fit(x)
+            # x = pca.transform(x)
+            # x = torch.tensor(x)
         else:
             # essentially don't use user features
             x = torch.ones((len(authors), 1))
 
-        data = Data(x=x, edge_index=edge_index)
+     
+
+        data = Data(x, edge_index=edge_index)
 
         if save == True and data_path != None:
             torch.save((data, ids), data_path)
