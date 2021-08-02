@@ -47,21 +47,29 @@ def get_bag_of_words(posts_path="./data/forum_posts.csv",
         # ---------- Get vocabulary (create lists of posts) ----------
         # Remove html tags, stopwords, and punctuation
         post_list = []
+        post_token_list = []
         # print(posts.msg_post.values.shape) # debugging print
         for post in tqdm(posts.msg_post.values, desc="create vocabulary"):
-            # print(f"post = {post}") # debugging print
+            # print(f'post = {post}') # debugging print
+           
             if post is not None and type(post) == str:
                 stripped_post = BeautifulSoup(post, "html.parser").get_text().replace(u"\xa0", u" ")
                 # Remove stopwords (must look at every word so slows performance)
-                stop = stopwords.words("english")
-                stripped_post = " ".join([i for i in word_tokenize(stripped_post.lower()) if i not in stop])
+                stop = stopwords.words('english')
+                tokens = [i for i in word_tokenize(stripped_post.lower()) if i not in stop and i.isalpha()]
+                post_token_list.append(tokens)
+                stripped_post = ' '.join(tokens)
                 post_list.append(stripped_post)
                 # print(f"post_list = {post_list}") # debugging print
                 # print(f"len(post_list) = {len(post_list)}") # debugging print
+            else:
+                post_list.append("")
 
         # Using keras Tokenizer to create vocabulary
+        # bow_vocab_model = Tokenizer(num_words=50000)
         bow_vocab_model = Tokenizer()
-        bow_vocab_model.fit_on_texts(post_list)
+        bow_vocab_model.fit_on_texts(post_token_list)
+        posts['stripped_post'] = post_list
 
         # Print keys # debugging print
         # print(f"Key : {list(bow_vocab_model.word_index.keys())}")
@@ -70,16 +78,15 @@ def get_bag_of_words(posts_path="./data/forum_posts.csv",
         # ---------- Get bag of words representation for each author based on words in each post ----------
         author_post_bags_of_words = []
         for author in tqdm(authors, desc="processing authors"):
-            mt_posts = posts.loc[posts["msg_author_id"] == author]
-            posts_for_this_author = mt_posts.msg_post.values
-            # print(f"type(posts_for_this_author) = {type(posts_for_this_author)}") # debugging print
-            # print(f"posts_for_this_author.shape = {posts_for_this_author.shape}") # debugging print
+            mt_posts = posts.loc[posts['msg_author_id'] == author]
+            posts_for_this_author = mt_posts.stripped_post.values
+            # print(f'type(posts_for_this_author) = {type(posts_for_this_author)}') # debugging print
+            # print(f'posts_for_this_author.shape = {posts_for_this_author.shape}') # debugging print
             # print(posts_for_this_author) # debugging print
             posts_for_this_author_list = []
             # Remove text similar to vocab
-            for post in posts_for_this_author:
-                if post is not None and type(post) == str:
-                    stripped_post = BeautifulSoup(post, "html.parser").get_text().replace(u"\xa0", u" ")
+            for stripped_post in posts_for_this_author:
+                if stripped_post is not None and type(post) == str:
                     posts_for_this_author_list.append(stripped_post)
             author_bow = bow_vocab_model.texts_to_matrix(posts_for_this_author_list, mode="count")
             # print(f"type(author_bow) = {type(author_bow)}") # debugging print

@@ -13,6 +13,29 @@ from torch_geometric.utils import train_test_split_edges, accuracy
 class Net(torch.nn.Module):
     def __init__(self, in_channels, out_channels):
         super(Net, self).__init__()
+        
+        
+
+        # hidden=2048
+
+        # self.conv1 = GCNConv(in_channels, hidden)
+        # self.conv2 = GCNConv(hidden, hidden // 2)
+        # self.conv3 = GCNConv(hidden // 2, hidden // 4)
+        # self.conv4 = GCNConv(hidden // 4, hidden // 8)
+        # self.conv5 = GCNConv(hidden // 8, hidden // 16)
+        # self.conv6 = GCNConv(hidden // 16, hidden // 32)
+
+        # self.conv_out = GCNConv(hidden // 32, out_channels)
+
+        
+        # self.convs = [
+        #     self.conv1,
+        #     self.conv2,
+        #     self.conv3,
+        #     self.conv4,
+        #     self.conv5,
+        #     self.conv6
+        # ]
         self.conv1 = GCNConv(in_channels, 128)
         self.conv3 = GCNConv(128, 1024)
         self.conv4 = GCNConv(1024, 1024)
@@ -21,6 +44,11 @@ class Net(torch.nn.Module):
         self.conv2 = GCNConv(1024, out_channels)
 
     def encode(self, x, edge_index):
+        # for conv in self.convs:
+        #     x = conv(x, edge_index)
+        #     x = x.relu()
+  
+        # return self.conv_out(x, edge_index)
         x = self.conv1(x, edge_index)
         x = x.relu()
         x = self.conv3(x, edge_index)
