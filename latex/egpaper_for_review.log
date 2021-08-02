@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.23 (MiKTeX 21.7) (preloaded format=pdflatex 2021.8.1)  1 AUG 2021 22:19
+This is pdfTeX, Version 3.141592653-2.6-1.40.23 (MiKTeX 21.7) (preloaded format=pdflatex 2021.8.1)  1 AUG 2021 22:29
 entering extended mode
 **./egpaper_for_review.tex
 (egpaper_for_review.tex
@@ -396,60 +396,17 @@ LaTeX Font Info:    Trying to load font information for OT1+pcr on input line 4
 (C:\Users\chris\AppData\Local\Programs\MiKTeX\tex/latex/psnfss\ot1pcr.fd
 File: ot1pcr.fd 2001/06/04 font definitions for OT1/pcr.
 )
-
-LaTeX Warning: Citation `linkpred2007' on page 1 undefined on input line 75.
-
-
-LaTeX Warning: Citation `schlichtkrull2017modeling' on page 1 undefined on inpu
-t line 75.
-
-
-LaTeX Warning: Citation `Duvenaud' on page 1 undefined on input line 75.
-
-
-LaTeX Warning: Citation `SEAL' on page 1 undefined on input line 75.
-
-
-LaTeX Warning: Citation `graphattention' on page 1 undefined on input line 77.
-
-
-LaTeX Warning: Citation `izadi' on page 1 undefined on input line 77.
-
-
-LaTeX Warning: Citation `zhang' on page 1 undefined on input line 79.
-
-
-LaTeX Warning: Citation `zhang' on page 1 undefined on input line 79.
-
 [1{C:/Users/chris/AppData/Local/MiKTeX/pdftex/config/pdftex.map}
 
 
-]
-
-LaTeX Warning: Citation `SEAL' on page 2 undefined on input line 103.
-
-
-LaTeX Warning: Citation `pytorch-geometric' on page 2 undefined on input line 1
-05.
-
-[2]
-
-LaTeX Warning: Citation `pytorch-geometric' on page 3 undefined on input line 1
-15.
-
-<multi-architecture-comparison.png, id=21, 578.16pt x 433.62pt>
+] [2]
+<multi-architecture-comparison.png, id=40, 578.16pt x 433.62pt>
 File: multi-architecture-comparison.png Graphic file (type png)
 <use multi-architecture-comparison.png>
 Package pdftex.def Info: multi-architecture-comparison.png  used on input line 
 138.
 (pdftex.def)             Requested size: 189.70947pt x 142.2812pt.
-
-LaTeX Warning: Reference `tab:bow' on page 3 undefined on input line 154.
-
-
-LaTeX Warning: Reference `tab:bow' on page 3 undefined on input line 159.
-
-[3 <./multi-architecture-comparison.png>]
+ [3 <./multi-architecture-comparison.png>]
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
@@ -484,22 +441,14 @@ Underfull \hbox (badness 1137) in paragraph at lines 47--47
 \OT1/ptm/m/n/9 graph neu-ral net-works.  In S. Ben-gio, H. Wal-lach, H.
  []
 
-) [4
-
-] [5] (egpaper_for_review.aux)
-
-LaTeX Warning: There were undefined references.
-
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
-
+) [4] [5] (egpaper_for_review.aux)
 Package rerunfilecheck Info: File `egpaper_for_review.brf' has not changed.
 (rerunfilecheck)             Checksum: 178C7C65497A897AEDB7F1F30C7EE28A;475.
  ) 
 Here is how much of TeX's memory you used:
  9571 strings out of 478870
  141578 string characters out of 2848837
- 457039 words of memory out of 3000000
+ 457568 words of memory out of 3000000
  27297 multiletter control sequences out of 15000+600000
  427863 words of font info for 82 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
@@ -510,9 +459,9 @@ C:/Users/chris/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmb8a.pfb><
 C:/Users/chris/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmr8a.pfb><
 C:/Users/chris/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmri8a.pfb>
 
-Output written on egpaper_for_review.pdf (5 pages, 1963465 bytes).
+Output written on egpaper_for_review.pdf (5 pages, 1966208 bytes).
 PDF statistics:
- 93 PDF objects out of 1000 (max. 8388607)
+ 107 PDF objects out of 1000 (max. 8388607)
  29 named destinations out of 1000 (max. 500000)
  6 words of extra memory for PDF output out of 10000 (max. 10000000)
 

@@ -151,13 +151,19 @@ In order to sanity-check our model, we produced an inference edgelist by passing
 
 We created a bag-of-words feature vector to represent each user. The hope is that the bag-of-words will represent the kinds of topics the user posts about and help in identifying which users would likley contribute to the same posts. In practice, the bag-of-words did not appear to help the model learn. The ability of the network to predict edges appears to be learned entirely from the edges in the training data.
 
-We trained a six layer graph convolutional network with five different sets of node features. Table \ref{tab:bow} shows the best validation and test accuracies for each. The first row shows the accuracy of the network without the bag-of-words features. In this scenario each node feature is simply a one dimensional tensor set to 1.
+We trained a six layer graph convolutional network with five different sets of node features. Table \ref{tab:bow} shows the best validation and test accuracies for each.
+
+The first row shows the accuracy of the network without the bag-of-words features. In this scenario each node feature is simply a one dimensional tensor set to 1.
 The next row shows the accuracies when using the 225143 dimensional bag-of-words vectors as features for each user. Accuracy is the same. The bag-of-word vectors are much larger than the number of parameters in the network. 
 The network layers only contain 100s or 1000s of parameters.
 Also, the counts for each word can be as high as ~6000. Scaling the the bag-of-word vectors with the scikit-learn StandardScaler subtracts the mean of each feature and divides by the variance. The result of training with these features is in the third row of the table.
 
 We tried to reduce the dimensionality of the bag-of-words using PCA. Row four of Table \ref{tab:bow}  shows the results of picking the top 1000 components. Row five shows the results after only keeping the top 50,000 most popular words in the vocabulary.
 Both of these approaches did not improve accuracy.
+
+The learning rate, random seed, number of epochs, and network layers were all constant for each row in table \ref{tab:bow}.
+However, less rigorous experiments with different learning rates and network layer sizes also yielded similar results.
+
 
 \begin{table*}[h!]
 \begin{center}
@@ -190,6 +196,7 @@ Both of these approaches did not improve accuracy.
 While the bag-of-words feature vectors did not prove useful for edge prediction, it is optimistic that the network can reach 75\% accuracy from the information contained in the edges alone. Better node features would likely improve the accuracy significantly.
 There are ways of producing smaller embeddings to represent text. Using a language model like BERT to generate embeddings for each forum post and then representing each user by the average of their posts is something we would want to explore next.
 
+We trained the model using our personal computers. This limited the size of the networks we could train. We would expect than a large enough network could simply memorize all of the edges in the training data and achieve 100\% training accuracy. We only reached ~75\% accuracy with our models. 
 %-------------------------------------------------------------------------
 \section{Work Division}
 
