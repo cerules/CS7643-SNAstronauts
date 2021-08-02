@@ -8,7 +8,7 @@ import copy
 from tqdm import tqdm
 
 class Trainer():
-    def __init__(self, model, optimizer, scheduler, device, name, load_state_path=None):
+    def __init__(self, model, optimizer, device, name, load_state_path=None, scheduler=None):
         self.model = model
         self.optimizer = optimizer
         self.scheduler = scheduler
@@ -57,7 +57,8 @@ class Trainer():
             self.test_aucs.append(test_auc)
             self.test_accs.append(test_acc)
 
-            self.scheduler.step(val_loss)
+            if (self.scheduler != None):
+                self.scheduler.step(val_loss)
 
             pbar.set_description(f'Epoch: {epoch:03d}, Loss: {loss:.4f}, Train: {train_acc:.4f}, Val: {val_acc:.4f}, '
                 f'Test: {test_acc:.4f}')
@@ -103,13 +104,12 @@ class Trainer():
         plt.show()
 
     def _save_loss_arrays(self, train_losses, train_aucs, train_accs, valid_losses, valid_aucs, valid_accs, test_losses, test_aucs, test_accs):
-        np.save('./output/train_losses.npy', (train_losses))
-        np.save('./output/train_aucs.npy', (train_aucs))
-        np.save('./output/train_accs.npy', (train_accs))
-        np.save('./output/valid_losses.npy', (valid_losses))
-        np.save('./output/valid_aucs.npy', (valid_aucs))
-        np.save('./output/valid_accs.npy', (valid_accs))
-        np.save('./output/test_losses.npy', (test_losses))
-        np.save('./output/test_aucs.npy', (test_aucs))
-        np.save('./output/test_aucs.npy', (test_accs))
-
+        np.save(f"./output/{self.name}/train_losses.npy", (train_losses))
+        np.save(f"./output/{self.name}/train_aucs.npy", (train_aucs))
+        np.save(f"./output/{self.name}/train_accs.npy", (train_accs))
+        np.save(f"./output/{self.name}/valid_losses.npy", (valid_losses))
+        np.save(f"./output/{self.name}/valid_aucs.npy", (valid_aucs))
+        np.save(f"./output/{self.name}/valid_accs.npy", (valid_accs))
+        np.save(f"./output/{self.name}/test_losses.npy", (test_losses))
+        np.save(f"./output/{self.name}/test_aucs.npy", (test_aucs))
+        np.save(f"./output/{self.name}/test_aucs.npy", (test_accs))

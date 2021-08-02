@@ -1,0 +1,48 @@
+\begin{thebibliography}{1}\itemsep=-1pt
+
+\bibitem{zhang}
+Link prediction with graph neural networks and knowledge extraction, 2020.
+
+\bibitem{Duvenaud}
+David~K Duvenaud, Dougal Maclaurin, Jorge Iparraguirre, Rafael Bombarell,
+  Timothy Hirzel, Alan Aspuru-Guzik, and Ryan~P Adams.
+\newblock Convolutional networks on graphs for learning molecular fingerprints.
+\newblock In C. Cortes, N. Lawrence, D. Lee, M. Sugiyama, and R. Garnett,
+  editors, {\em Advances in Neural Information Processing Systems}, volume~28.
+  Curran Associates, Inc., 2015.
+
+\bibitem{pytorch-geometric}
+Matthias Fey and Dongkwan Kim.
+\newblock Pytorch geometric - link prediction.
+\newblock
+  \url{https://github.com/rusty1s/pytorch_geometric/blob/master/examples/link_pred.py},
+  2021.
+
+\bibitem{graphattention}
+Weiwei Gu, Fei Gao, Xiaodan Lou, and Jiang Zhang.
+\newblock Link prediction via graph attention network.
+\newblock {\em CoRR}, abs/1910.04807, 2019.
+
+\bibitem{izadi}
+Mohammad~Rasool Izadi, Yihao Fang, Robert Stevenson, and Lizhen Lin.
+\newblock Optimization of graph neural networks with natural gradient descent.
+\newblock {\em CoRR}, abs/2008.09624, 2020.
+
+\bibitem{linkpred2007}
+David Liben-Nowell and Jon Kleinberg.
+\newblock The link-prediction problem for social networks.
+\newblock {\em J. Am. Soc. Inf. Sci. Technol.}, 58(7):1019–1031, May 2007.
+
+\bibitem{schlichtkrull2017modeling}
+Michael Schlichtkrull, Thomas~N. Kipf, Peter Bloem, Rianne van~den Berg, Ivan
+  Titov, and Max Welling.
+\newblock Modeling relational data with graph convolutional networks, 2017.
+
+\bibitem{SEAL}
+Muhan Zhang and Yixin Chen.
+\newblock Link prediction based on graph neural networks.
+\newblock In S. Bengio, H. Wallach, H. Larochelle, K. Grauman, N. Cesa-Bianchi,
+  and R. Garnett, editors, {\em Advances in Neural Information Processing
+  Systems}, volume~31. Curran Associates, Inc., 2018.
+
+\end{thebibliography}

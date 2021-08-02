@@ -8,17 +8,15 @@ from sklearn.decomposition import PCA
 
 from bag_of_words import get_bag_of_words
 
-
-def get_ironmarch_network_data(
-                                posts_path = "./data/forum_posts.csv",
-                                topics_path = "./data/forum_topics.csv",
-                                data_path = "./data/ironmarch.pth", 
-                                threshold = 2,
-                                load=True,
-                                save=True,
-                                loadBow=True,
-                                saveBow=True,
-                                Bow=True):
+def get_ironmarch_network_data(posts_path="./data/forum_posts.csv",
+                               topics_path="./data/forum_topics.csv",
+                               data_path="./data/ironmarch.pth", 
+                               threshold=2,
+                               load=True,
+                               save=True,
+                               loadBow=True,
+                               saveBow=True,
+                               Bow=True):
     '''
     Returns pytorch geometric graph data object created from IronMarch message post data
     and the ids list to look up user database ids
@@ -39,7 +37,7 @@ def get_ironmarch_network_data(
         posts = pd.read_csv(posts_path)
         topics = pd.read_csv(topics_path)
 
-        authors = posts['msg_author_id'].unique()
+        authors = posts["msg_author_id"].unique()
         mt_ids = topics["mt_id"].unique()
 
         # Create links (author1 -#-> author2) dictionary
@@ -78,20 +76,19 @@ def get_ironmarch_network_data(
             bow, vocab, post_authors = get_bag_of_words(posts_path, topics_path, load=loadBow, save=saveBow) # How to place it in so the model will train?
             assert(len(authors) == len(post_authors))
 
-            vocab_size = len(vocab)
             x = torch.zeros((len(authors), bow.shape[1]))
             for idx, author in enumerate(post_authors):
                 x[ids.index(author)] = torch.tensor(bow[idx])
 
-            # x = np.array(x)
-            # scaler = preprocessing.StandardScaler().fit(x)
+            x = np.array(x)
+            scaler = preprocessing.StandardScaler().fit(x)
 
-            # x = scaler.transform(x)
+            x = scaler.transform(x)
 
-            # pca = PCA(n_components = 1000)
-            # pca.fit(x)
-            # x = pca.transform(x)
-            # x = torch.tensor(x)
+            pca = PCA(n_components = 1000)
+            pca.fit(x)
+            x = pca.transform(x)
+            x = torch.tensor(x)
         else:
             # essentially don't use user features
             x = torch.ones((len(authors), 1))
