@@ -1,55 +1,53 @@
-This is BibTeX, Version 0.99d
+This is BibTeX, Version 0.99d (TeX Live 2021)
 Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
 The top-level auxiliary file: egpaper_for_review.aux
-Reallocating 'name_of_file' (item size: 1) to 14 items.
 The style file: ieee_fullname.bst
-Reallocating 'name_of_file' (item size: 1) to 6 items.
 Database file #1: egbib.bib
-Warning--I didn't find a database entry for "Authors14b"
-Warning--I didn't find a database entry for "Alpher02"
-Warning--I didn't find a database entry for "Alpher03"
-Warning--I didn't find a database entry for "Alpher04"
-Warning--I didn't find a database entry for "Authors14"
+Name 1 in "Alexander Reid Ross, Emmi Bevensee, and ZC" has a comma at the end for entry bellingcat
+while executing---line 1079 of file ieee_fullname.bst
 Warning--to sort, need author or key in zhang
-You've used 8 entries,
+Name 1 in "Alexander Reid Ross, Emmi Bevensee, and ZC" has a comma at the end for entry bellingcat
+while executing---line 1122 of file ieee_fullname.bst
+Warning--empty journal in ctc
+You've used 12 entries,
             2120 wiz_defined-function locations,
-            558 strings with 5319 characters,
-and the built_in function-call counts, 2670 in all, are:
-= -- 225
-> -- 194
+            565 strings with 5865 characters,
+and the built_in function-call counts, 3546 in all, are:
+= -- 302
+> -- 234
 < -- 2
-+ -- 74
-- -- 65
-* -- 202
-:= -- 470
-add.period$ -- 23
-call.type$ -- 8
-change.case$ -- 51
++ -- 92
+- -- 77
+* -- 237
+:= -- 619
+add.period$ -- 32
+call.type$ -- 12
+change.case$ -- 69
 chr.to.int$ -- 0
-cite$ -- 9
-duplicate$ -- 80
-empty$ -- 191
-format.name$ -- 65
-if$ -- 539
+cite$ -- 14
+duplicate$ -- 111
+empty$ -- 274
+format.name$ -- 77
+if$ -- 723
 int.to.chr$ -- 0
-int.to.str$ -- 8
-missing$ -- 5
-newline$ -- 40
-num.names$ -- 18
-pop$ -- 64
+int.to.str$ -- 12
+missing$ -- 6
+newline$ -- 57
+num.names$ -- 26
+pop$ -- 97
 preamble$ -- 1
-purify$ -- 43
+purify$ -- 57
 quote$ -- 0
-skip$ -- 63
+skip$ -- 96
 stack$ -- 0
-substring$ -- 74
-swap$ -- 12
+substring$ -- 96
+swap$ -- 15
 text.length$ -- 2
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 32
-warning$ -- 1
-while$ -- 17
-width$ -- 9
-write$ -- 83
-(There were 6 warnings)
+type$ -- 48
+warning$ -- 2
+while$ -- 25
+width$ -- 14
+write$ -- 117
+(There were 2 error messages)

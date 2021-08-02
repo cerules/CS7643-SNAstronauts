@@ -1,7 +1,12 @@
-\begin{thebibliography}{1}\itemsep=-1pt
+\begin{thebibliography}{10}\itemsep=-1pt
 
 \bibitem{zhang}
 Link prediction with graph neural networks and knowledge extraction, 2020.
+
+\bibitem{bellingcat}
+Emmi~Bevensee Alexander Reid~Ross and ZC.
+\newblock Transnational white terror: Exposing atomwaffen and the iron march
+  networks, 2019.
 
 \bibitem{Duvenaud}
 David~K Duvenaud, Dougal Maclaurin, Jorge Iparraguirre, Rafael Bombarell,
@@ -33,10 +38,27 @@ David Liben-Nowell and Jon Kleinberg.
 \newblock The link-prediction problem for social networks.
 \newblock {\em J. Am. Soc. Inf. Sci. Technol.}, 58(7):1019–1031, May 2007.
 
+\bibitem{ctc}
+Alex Newhouse.
+\newblock The threat is the network: The multi-node structure of neo-fascist
+  accelerationism.
+\newblock 14, 2021.
+
 \bibitem{schlichtkrull2017modeling}
 Michael Schlichtkrull, Thomas~N. Kipf, Peter Bloem, Rianne van~den Berg, Ivan
   Titov, and Max Welling.
 \newblock Modeling relational data with graph convolutional networks, 2017.
+
+\bibitem{lawfare}
+Jacques Singer-Emery and III Rex~Bray.
+\newblock The iron march data dump provides a window into how white
+  supremacists communicate and recruit, 2020.
+
+\bibitem{doj}
+Southern~Division United States District~Court, Eastern District of
+  North~Carolina.
+\newblock Superseding indictment, usa v. liam montgomery collins, paul james
+  kryscuk, jordan duncan, and justin wade hermanson, 2021.
 
 \bibitem{SEAL}
 Muhan Zhang and Yixin Chen.
